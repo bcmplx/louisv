@@ -1,6 +1,8 @@
 import React, {Component, Fragment} from 'react'
 import Header from './header/Header'
 import Prestation from './Prestation'
+import Form from './Form'
+// import Test from './Test'
 
 class FirstPage extends Component {
 
@@ -26,15 +28,13 @@ class FirstPage extends Component {
                         <Prestation name="presta 2" />
                         <Prestation name="presta 3" />
                         <Prestation name="presta 4" />  
+                        
                         <div id="contact"></div>
                     </div>
                     
                     <h2>Contact</h2>
                     <div className="prestations">                       
-                        <Prestation name="presta 1" />
-                        <Prestation name="presta 2" />
-                        <Prestation name="presta 3" />
-                        <Prestation name="presta 4" />  
+                        <Form />
                     </div>
 
 
