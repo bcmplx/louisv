@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import FirstPage from './components/First';
-// import Modal from './components/Modal'
+// import styled from 'styled-components';
 
 function App() {
 
-
-  return (
+	return (
     
-    <div className="App">
-        
-        <FirstPage />
-        {/* <Modal /> */}
-    </div>
-  );
+		<div className="App">
+			{/* <HeaderBackground src="https://images.pexels.com/photos/6783240/pexels-photo-6783240.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/> */}
+			<FirstPage />
+			{/* <Modal /> */}
+		</div>
+	);
 }
 
 export default App;

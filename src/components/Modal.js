@@ -1,80 +1,143 @@
-import React,{Fragment}  from 'react'
-// import ReactDOM from 'react-dom';
+import React, {useRef, useEffect, useCallback} from 'react';
+import { useSpring, animated } from 'react-spring';
+import styled from 'styled-components';
+import {MdClose} from 'react-icons/md';
 
-function Modal () {
-    const modalOverlay = document.getElementById("modalOverlay");
-    let modalOpen = document.getElementById("modalOpen");
-    let modalClose = document.getElementById("modalClose");
+const Background = styled.div`
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    overflow-y: hidden;
+    z-index: 2;
+`;
 
-    // Initialize Open Modal by Click Button
-    modalOpen.addEventListener("click", () => {
-        modalOverlay.classList.add("visible");
-    });
+const ModalWrapper = styled.div`
+    width: 800px;
+    height: 500px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    color: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* position: fixed; */
+    /* top: 10%; */
+    z-index: 200;
+    border-radius: 10px;
+    overflow-y: hidden;
+`;
+const ModalImg = styled.img`
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    background: #000;
+`;
 
-    // Initialize Close Modal by Click Button
-    modalClose.addEventListener("click", () => {
-        modalOverlay.classList.remove("visible");
-        clearInputField();
-    });
+const ModalContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    line-height: 1.8;
+    color: #141414;
+    overflow-y: hidden;
 
-    // Initialize Close Modal by Click Outside
-    window.addEventListener("click", (e) => {
-        if (e.target === modalOverlay) {
-            modalOverlay.classList.remove("visible");
-            clearInputField();
-        }
-    });
+    p {
+        margin-bottom: 1rem;
+    }
 
-    // Initialize Close Modal by Click Escape
-    window.addEventListener("keyup", (e) => {
-        if (e.key === "Escape" && modalOverlay.classList.contains("visible")) {
-            modalOverlay.classList.remove("visible");
-            clearInputField();
-        }
-    });
+    button {
+        padding: 10px 24px;
+        background: #141414;
+        color: #fff;
+        border: none;
+    }
+`;
 
-    // Initialize preventDefault Submit Button
-    window.addEventListener("submit", (e) => {
-        e.preventDefault();
-    });
 
-    // Initialize Clear Input Filed Function
-    const clearInputField = () => {
-        setTimeout(() => {
-            document.getElementById("email").value = "";
-        }, 1000);
-    };
+const CloseModalButton = styled(MdClose)`
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    z-index: 10;
+`;
 
-    return (
-        <Fragment>
-                
-                <section className="modal">
-                    <div className="modal-overlay" id="modalOverlay">
-                        <div className="modal-content">
-                            <div className="modal-detail">
-                                <span className="modal-icons"><i className="fas fa-envelope"></i></span>
-                                <h3 className="title title-medium">Add your email address</h3>
-                                <p className="paragraph">
-                                    Subscribe our newsletter by added your email address to get the update information.
-                                </p>
-                            </div>
-                            <form name="newsletter" className="form">
-                                <div className="form-control">
-                                    <label for="email" className="form-label" hidden>Email Address</label>
-                                    <input type="email" name="email" id="email" className="form-input" placeholder="Add your email address" required autofocus />
-                                    <div className="form-action">
-                                        <button type="button" className="btn btn-medium btn-lighten" id="modalClose">Maybe Later</button>
-                                        <button type="submit" className="btn btn-medium btn-primary">Add Email</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </section>
-                {/* <script>{Modal}</script> */}
-                
-            </Fragment>
-    )
-}
 
-export default Modal
+
+
+export const Modal = ({showModal, setShowModal}) => {
+
+	console.log(showModal);
+
+	if(showModal) {
+		document.body.style.overflow = 'hidden';
+	}
+	else {
+		document.body.style.overflow = 'unset';
+	}
+
+
+	const modalRef = useRef();
+
+	const animation = useSpring({
+		config: {
+			duration: 2500
+		},
+		opacity: showModal ? 1 : 0,
+		transform: showModal ? 'translateY(0%)' : 'translateY(-100%)'
+	});
+
+	const closeModal = e => {
+		if(modalRef.current  === e.target) {
+			setShowModal(false);
+		}
+	};
+
+	const keyPress = useCallback(e => {
+		if(e.key === 'Escape' && showModal) {
+			setShowModal(false);
+		}
+	}, [setShowModal, showModal]);
+
+	useEffect(() => {
+		document.addEventListener('keydown', keyPress);
+		return () => {
+			document.removeEventListener('keydown', keyPress) ;
+		} ;
+	}, [keyPress]);
+
+
+
+	return (
+		
+		<> 
+			{showModal ? (
+				<Background ref={modalRef} onClick={closeModal}> 
+					<animated.div style={animation}>
+						<ModalWrapper>
+							<ModalImg src={'https://images.pexels.com/photos/5957128/pexels-photo-5957128.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'} alt='camera' />
+							<ModalContent>
+								<h1>Ready ?</h1>
+								<p>Hello World</p>
+							</ModalContent>
+							<CloseModalButton aria-label='Close modal' onClick={() => setShowModal(prev => !prev)} />
+						</ModalWrapper>
+					</animated.div>
+				</Background>
+			) 
+				: null 
+			} 
+		</>
+	);
+
+};

@@ -5,8 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  /* background-image: url('https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); */
   background-attachment: fixed;
+  color: #fefefe
 
 }
 
@@ -17,32 +18,67 @@ code {
 
 .header {
   display: flex;
-  background: whitesmoke;
-  justify-content: space-around;
+  /* background: url("https://images.pexels.com/photos/2117937/pexels-photo-2117937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
+  justify-content: space-between;
   position: fixed;
   overflow: hidden;
   width: 100%;
+  /* z-index: 100; */
+  top: 5%;
+}
+strong {
+  color: #b3a577;
+  position: relative;
+}
 
-  top: 0;
+strong::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background: #b3a577;
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.7s ease-in;
+}
+strong:hover::before {
+  transform: scaleX(1);
+}
+
+.reactcolor {
+  color: #5CD9FF;
+}
+
+.nodecolor {
+  color: #026e00;
 }
 
 .contentpageone {
-  margin: 7%;
+  margin: 0 10%;
   font-family: "Share Tech Mono", monospace;
+  position: relative;
 }
 
 .contentpageone h1 {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #026e00, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-  margin: 10%;
+  margin: 8% 7% 15% 7%;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.1;
 }
 
 .contentpageone h2 {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  position: relative;
+  top: 3%;
+  background: linear-gradient(-45deg, #026e00, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-  margin: -2% 30% 2% 30%;
+  margin: 5% 30% 2% 30%;
 }
 
 a { 
@@ -54,7 +90,6 @@ a {
 .prestations {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10%;
 }
 .prestation img {
   width: 65%;
@@ -86,16 +121,17 @@ nav > ul {
   justify-content: space-around;
   align-items: center;
   font-family: "Share Tech Mono", monospace;
+  flex-direction: column;
 }
 nav ul div {
-  height: 80%;
+  height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  /* color: black; */
 }
 nav ul div::before {
   position: absolute;
@@ -105,7 +141,7 @@ nav ul div::before {
   left: 0;
   right: 0;
   z-index: 0;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #fefefe;
   transform: scaleX(0);
   transition: transform 0.2s ease-out;
   pointer-events: none;
@@ -158,13 +194,13 @@ html {
 }
 
 body {
-  position: relative;
+  /* position: relative; */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--color-black);
-  background: var(--color-white);
+  color: #fefefe;;
+  background: #181818;
 }
 
 a,
@@ -244,6 +280,11 @@ video {
   font-weight: 700;
   line-height: 1.25;
   color: var(--color-black);
+}
+.form-example {
+  display: inherit;
+width: 100%;
+justify-content: space-between;
 }
 
 .form-control {
@@ -415,9 +456,6 @@ video {
 }
 /*# sourceMappingURL=modal.css.map */
 
-body {
-	
-}
 
 @keyframes gradient {
 	0% {
