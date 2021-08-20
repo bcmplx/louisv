@@ -22,7 +22,7 @@ code {
   justify-content: space-between;
   position: fixed;
   overflow: hidden;
-  width: 100%;
+  width: 99%;
   /* z-index: 100; */
   top: 5%;
 }
@@ -66,7 +66,7 @@ strong:hover::before {
   background: linear-gradient(-45deg, #026e00, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-  margin: 8% 7% 15% 7%;
+  margin: 3% 7% 8% 7%;
   font-size: 3.2rem;
   font-weight: 700;
   line-height: 1.1;
@@ -85,6 +85,10 @@ a {
   color: inherit; 
   text-decoration: inherit;
 } 
+
+a:hover {
+  color: #fefefe;
+}
 
 
 .prestations {

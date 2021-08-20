@@ -11,7 +11,7 @@ const Nav = () => {
 		line-height: 3;
 		/* background: url("https://images.pexels.com/photos/2117937/pexels-photo-2117937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
 		margin-left: 40%;
-		margin-right: 1%;
+		margin-right: 2%;
 		padding-bottom: 1%;
 	`;
 

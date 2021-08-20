@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import Header from './header/Header';
 import Prestation from './Prestation';
 import Form from './Form';
+import Stacks from './Stacks';
 import styled from 'styled-components';
 
 import '../arrow.css';
@@ -24,22 +25,31 @@ class FirstPage extends Component {
 			font-weight: 700;
 			line-height: 1.1;
 			margin: 0 7%;
-			height: 60vh;
+			height: 46vh;
+		`;
+
+		const FirstPage = styled.div`
+			height: 100vh
 		`;
 
 		return (
 			<Fragment>
 				<BackgroundImg src="https://images.pexels.com/photos/7078272/pexels-photo-7078272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="background"/>
-				<Header />
-				<div className="contentpageone">
-					<h1>Fullstack Web and Application Developer <br /> Javascript - NodeJS / React</h1>
+				<FirstPage>
+					<Header />
+					<div className="contentpageone">
+						<h1>Fullstack Web and Application Developer <br /> Javascript - NodeJS / React</h1>
 
-					<Welcome>
-						Hello i&#39;m <strong>Louis</strong>. A Full-Stack Developer <strong>based in Paris</strong>. I specialise in creating interactive experiences and functional interfaces using <strong>Javascript</strong> (<em className="reactcolor">React</em> for the Front part and <em className="nodecolor">NodeJS</em> for the Back)
-					</Welcome>
-					<div className="arrow bounce">
-						<a className="fa fa-arrow-down fa-2x" href="#prestations"></a> {/* eslint-disable-line no-alert*/}
+						<Welcome>
+							Hello i&#39;m <strong>Louis</strong>. A Full-Stack Developer <strong>based in Paris</strong>. I specialise in creating interactive experiences and functional interfaces using <strong>Javascript</strong> (<em className="reactcolor">React</em> for the Front part and <em className="nodecolor">NodeJS</em> for the Back)
+						</Welcome>
+						<Stacks />
+						<div className="arrow bounce">
+							<a className="fa fa-arrow-down fa-2x" href="#prestations"></a> {/* eslint-disable-line no-alert*/}
+						</div>
 					</div>
+				</FirstPage>
+				<div className="contentpageone">
 					<div id="prestations"></div>
 					<h2>Prestations</h2>
 					<div className="prestations">                       
