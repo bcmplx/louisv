@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import Header from './header/Header';
 import Prestation from './Prestation';
-import Form from './Form';
+// import Form from './Form';
 import Stacks from './Stacks';
 import Formation from './formations/Formation';
 import styled from 'styled-components';
@@ -66,8 +66,6 @@ class FirstPage extends Component {
 					<div className="prestations">                       
 						<Prestation name="presta 1" />
 						<Prestation name="presta 2" />
-						<Prestation name="presta 3" />
-						<Prestation name="presta 4"></Prestation> 
 						
 					</div>
 					<div id="formation"></div>
@@ -75,10 +73,10 @@ class FirstPage extends Component {
 					<Formation photos="oclock" />
 					<Formation photos="ocr" />
 					
-					<h2>Contact</h2>
+					<h2 id="contact">Contact</h2>
 					<div className="prestations">   
 						<Contact />                    
-						<Form />
+						{/* <Form /> */}
 					</div>
 
 

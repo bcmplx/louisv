@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 import sass from './img/logos/sass.png';
 import bootstrap from './img/logos/bootstrap.png';
-import git from './img/logos/Git-Logo-Black-1.webp';
+import git from './img/logos/git.png';
 import seo from './img/logos/seo.png';
-import greenit from './img/logos/greenit.png';
+// import greenit from './img/logos/greenit.png';
 import react from './img/logos/react.png';
 import nodejs from './img/logos/nodejs.png';
 
@@ -37,7 +37,7 @@ class Stacks extends Component {
 				<img src={sass} alt="Sass logo"/>
 				<img src={bootstrap} alt="Bootstrap logo" className="small"/>
 				<img src={git} alt="Git logo"/>				
-				<img src={greenit} alt="Greenit logo" className="small"/>
+				{/* <img src={greenit} alt="Greenit logo" className="small"/> */}
 				<img src={seo} alt="SEO logo" className="small"/>
 			</Stack>
 		);

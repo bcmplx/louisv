@@ -111,11 +111,23 @@ a:hover {
 }
 
 .prestation {
-  width: 45%;
+  width: 51%;
   border: solid 1px black;
   margin: auto;
   padding: 2%;
 }
+
+.footer__video--titre {
+	z-index: 1;
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	background: #141414;
+	height: 90%;  
+	border: 1px solid #fefefe;
+	padding: 1.5%;
+}
+
 header {
   border: 1px solid transparent;
   border-radius: 1rem;
