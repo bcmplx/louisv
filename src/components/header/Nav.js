@@ -22,7 +22,7 @@ const Nav = () => {
 					<li><a href="#prestations">Prestations</a></li>
 				</div>
 				<div role="link" tabIndex="0">
-					<li><a href="#formation">Formation</a></li>
+					<li><a href="#formation">Formations</a></li>
 				</div>
 				<div role="link" tabIndex="0">
 					<li><a href="#contact">Contact</a></li>

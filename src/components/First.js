@@ -3,7 +3,12 @@ import Header from './header/Header';
 import Prestation from './Prestation';
 import Form from './Form';
 import Stacks from './Stacks';
+import Formation from './formations/Formation';
 import styled from 'styled-components';
+import Contact from './Contact';
+
+
+// import oclock from './img/oclock.png';
 
 import '../arrow.css';
 
@@ -31,6 +36,12 @@ class FirstPage extends Component {
 		const FirstPage = styled.div`
 			height: 100vh
 		`;
+
+		/* const photos = {
+			oclock: require('./img/oclock.png')
+		}; */
+
+		/* console.log(photos.oclock); */
 
 		return (
 			<Fragment>
@@ -60,18 +71,13 @@ class FirstPage extends Component {
 						
 					</div>
 					<div id="formation"></div>
-					<h2>Formation</h2>
-					<div className="prestations">                       
-						<Prestation name="presta 1" />
-						<Prestation name="presta 2" />
-						<Prestation name="presta 3" />
-						<Prestation name="presta 4" />  
-						
-						<div id="contact"></div>
-					</div>
+					<h2>Formations</h2>
+					<Formation photos="oclock" />
+					<Formation photos="ocr" />
 					
 					<h2>Contact</h2>
-					<div className="prestations">                       
+					<div className="prestations">   
+						<Contact />                    
 						<Form />
 					</div>
 

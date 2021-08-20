@@ -77,7 +77,7 @@ const CloseModalButton = styled(MdClose)`
 
 export const Modal = ({showModal, setShowModal}) => {
 
-	console.log(showModal);
+	// console.log(showModal);
 
 	if(showModal) {
 		document.body.style.overflow = 'hidden';

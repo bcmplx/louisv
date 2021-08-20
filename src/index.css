@@ -7,8 +7,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* background-image: url('https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); */
   background-attachment: fixed;
-  color: #fefefe
+  color: #fefefe;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #181818 !important; 
+}
 
+a {
+	color: inherit !important;
+}
+
+ol, ul {
+	padding-left: 0 !important;
 }
 
 code {
@@ -66,7 +77,7 @@ strong:hover::before {
   background: linear-gradient(-45deg, #026e00, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-  margin: 3% 7% 8% 7%;
+  margin: 3% 7% 5% 7%;
   font-size: 3.2rem;
   font-weight: 700;
   line-height: 1.1;
@@ -195,16 +206,6 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-}
-
-body {
-  /* position: relative; */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #fefefe;;
-  background: #181818;
 }
 
 a,
