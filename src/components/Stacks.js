@@ -15,7 +15,13 @@ class Stacks extends Component {
 
 		const Stack = styled.div`
 			color: inherit;
-			height: 15vh;
+			margin: auto;
+			margin-bottom: 5%;
+			width: 80%;
+			padding: 1%;
+			border-radius: 13px; 
+			height: 17vh;
+			background-color: rgba(255, 255, 255, 0.2);
 
 			img {
 				width: 10%;

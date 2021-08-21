@@ -26,22 +26,16 @@ class FirstPage extends Component {
         `;
 
 		const Welcome = styled.p`
-			font-size: 3.2rem;
+			font-size: 2.2rem;
 			font-weight: 700;
 			line-height: 1.1;
 			margin: 0 7%;
-			height: 46vh;
+			height: 40vh;
 		`;
 
 		const FirstPage = styled.div`
 			height: 100vh
 		`;
-
-		/* const photos = {
-			oclock: require('./img/oclock.png')
-		}; */
-
-		/* console.log(photos.oclock); */
 
 		return (
 			<Fragment>
@@ -52,7 +46,9 @@ class FirstPage extends Component {
 						<h1>Fullstack Web and Application Developer <br /> Javascript - NodeJS / React</h1>
 
 						<Welcome>
-							Hello i&#39;m <strong>Louis</strong>. A Full-Stack Developer <strong>based in Paris</strong>. I specialise in creating interactive experiences and functional interfaces using <strong>Javascript</strong> (<em className="reactcolor">React</em> for the Front part and <em className="nodecolor">NodeJS</em> for the Back)
+							Bonjour, je m&#39;appelle <strong>Louis</strong>. Un développeur Full-Stack qui habite à <strong>Paris</strong>. Je suis spécialisé dans la création d&#39;expériences créatives et d&#39;interfaces fonctionnelles en utilisant <strong>Javascript</strong> (<em className="reactcolor">React</em> pour la partie Front et <em className="nodecolor">NodeJS</em> pour le Back).
+							<br/><br/>
+							Je suis aujourd&#39;hui à la recherche d&#39;un <strong>premier emploi</strong> et mettre en application mes compétences !
 						</Welcome>
 						<Stacks />
 						<div className="arrow bounce">
@@ -62,9 +58,9 @@ class FirstPage extends Component {
 				</FirstPage>
 				<div className="contentpageone">
 					<div id="prestations"></div>
-					<h2>Prestations</h2>
+					<h2>Réalisations</h2>
 					<div className="prestations">                       
-						<Prestation name="presta 1" />
+						<Prestation name="Days in Paris" />
 						<Prestation name="presta 2" />
 						
 					</div>

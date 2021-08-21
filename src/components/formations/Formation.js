@@ -15,11 +15,13 @@ class Formation extends Component {
 		const Format = styled.div`
 			width: 70%;
 			margin: auto;
+			margin-bottom: 1%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			border: 1px solid #fefefe;
 			padding: 4%;
+			border-radius: 7px; 
 
 			img {
 				width: 30%;

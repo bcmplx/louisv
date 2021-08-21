@@ -14,18 +14,59 @@ class Contact extends Component {
 				justify-content: start;
 				margin: auto;
 				width: 20%;
+				align-items: center;
+				height: 4vh
+			}
+			i {
+				padding: 80%;
+			}
+			i::before {
+				/* padding: 15% !important; */
 			}
 			
 			li:nth-child(2n) {
 				width: 100%;
 
 			}
+			li:nth-child(2n+1) {
+				/* padding: 14%; */
+
+			}
 			li a:nth-child(1n) {
-				display: flex;
-				justify-content: flex-end;
+				display: -webkit-box;
+				justify-content: flex-end; 
 				width: 100%;
 				height: 100%;
 			}
+			li a:hover {
+				color: red;
+			}
+			.social-icons a {
+				color: #fff;
+				text-decoration: none;
+			}
+
+			.fa-linkedin {
+			/* padding: 25 !important; */
+			-webkit-transition: .5s;
+			transition: .5s;
+			background-color: #181818;
+			}
+
+			.fa-linkedin:hover {
+			background-color: #0073a4;
+			}
+
+			.fa-github {
+			/* padding: 25%; */
+			-webkit-transition: .5s;
+			transition: .5s;
+			background-color: #181818;
+			}
+
+			.fa-github:hover {
+			background-color: #5a32a3;
+}
 		`;
 		return(
 			<Contact className="footer__video--titre">
@@ -33,7 +74,7 @@ class Contact extends Component {
 				<p><a HREF="mailto:louis.villainl@gmail.com">louis.villainl@gmail.com</a></p>
 				<p>06 27 57 05 61</p>  
 				<ul className="social-icons">
-					<li>GitHub: </li>
+					<li>Github: </li>
 					<li><a href="https://github.com/bcmplx/" className="social-icon" target="_blank" rel="noreferrer"> <i className="fa fa-github"></i></a></li>
 				</ul>
 				<ul className="social-icons">

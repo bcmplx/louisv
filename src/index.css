@@ -81,6 +81,7 @@ strong:hover::before {
   font-size: 3.2rem;
   font-weight: 700;
   line-height: 1.1;
+  border-radius: 9px; 
 }
 
 .contentpageone h2 {
@@ -90,6 +91,7 @@ strong:hover::before {
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
   margin: 5% 30% 2% 30%;
+  border-radius: 6px; 
 }
 
 a { 
@@ -107,7 +109,8 @@ a:hover {
   flex-wrap: wrap;
 }
 .prestation img {
-  width: 65%;
+  width: 65%; 
+  margin: auto;
 }
 
 .prestation {
@@ -115,6 +118,7 @@ a:hover {
   border: solid 1px black;
   margin: auto;
   padding: 2%;
+  border-radius: 7px; 
 }
 
 .footer__video--titre {
@@ -126,6 +130,7 @@ a:hover {
 	height: 90%;  
 	border: 1px solid #fefefe;
 	padding: 1.5%;
+	border-radius: 7px; 
 }
 
 header {

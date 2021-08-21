@@ -19,7 +19,7 @@ const Nav = () => {
 		<Nav id="navbar" role="navigation">
 			<ul>
 				<div role="link" tabIndex="0">
-					<li><a href="#prestations">Prestations</a></li>
+					<li><a href="#prestations">Réalisations</a></li>
 				</div>
 				<div role="link" tabIndex="0">
 					<li><a href="#formation">Formations</a></li>
