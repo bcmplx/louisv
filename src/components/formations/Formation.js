@@ -8,7 +8,7 @@ import Ocr from './Ocr';
 class Formation extends Component {
 	render() {
 
-		console.log(this.props.photos);
+		// console.log(this.props.photos);
 		// const photo = require(`../img/${this.props.photos}.png`);
 		// console.log(photo);
 

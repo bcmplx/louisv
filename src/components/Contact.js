@@ -71,7 +71,7 @@ class Contact extends Component {
 		return(
 			<Contact className="footer__video--titre">
 				<p>Louis Villain</p>
-				<p><a HREF="mailto:louis.villainl@gmail.com">louis.villainl@gmail.com</a></p>
+				<p><a href="mailto:louis.villainl@gmail.com">louis.villainl@gmail.com</a></p>
 				<p>06 27 57 05 61</p>  
 				<ul className="social-icons">
 					<li>Github: </li>

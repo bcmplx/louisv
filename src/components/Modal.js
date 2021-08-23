@@ -1,7 +1,12 @@
-import React, {useRef, useEffect, useCallback} from 'react';
+import React, {useRef, useEffect, useCallback, useState} from 'react';
 import { useSpring, animated } from 'react-spring';
 import styled from 'styled-components';
 import {MdClose} from 'react-icons/md';
+import eiffel from './img/eiffel.jpeg';
+import louvre from './img/louvre.jpg';
+import Dip from './Dip';
+import DipContent from './DipContent';
+import ArrowModal from './ArrowModal';
 
 const Background = styled.div`
     width: 100%;
@@ -29,13 +34,21 @@ const ModalWrapper = styled.div`
     /* top: 10%; */
     z-index: 200;
     border-radius: 10px;
-    overflow-y: hidden;
+	overflow-y: hidden;
+	img {
+		margin: 0;
+	}
+	/* i {
+		content: "\f063";
+	} */
 `;
 const ModalImg = styled.img`
     width: 100%;
     height: 100%;
     border-radius: 10px 0 0 10px;
-    background: #000;
+	background: #000;
+	
+	
 `;
 
 const ModalContent = styled.div`
@@ -47,6 +60,7 @@ const ModalContent = styled.div`
     line-height: 1.8;
     color: #141414;
     overflow-y: hidden;
+	margin: 0 5% 0 -30%;
 
     p {
         margin-bottom: 1rem;
@@ -77,8 +91,12 @@ const CloseModalButton = styled(MdClose)`
 
 export const Modal = ({showModal, setShowModal}) => {
 
-	// console.log(showModal);
+	// console.log(this.props);
 
+	const [textContent, setTextContent] = useState('intro');
+
+	// console.log(textContent);
+ 
 	if(showModal) {
 		document.body.style.overflow = 'hidden';
 	}
@@ -118,6 +136,7 @@ export const Modal = ({showModal, setShowModal}) => {
 
 
 
+
 	return (
 		
 		<> 
@@ -125,10 +144,20 @@ export const Modal = ({showModal, setShowModal}) => {
 				<Background ref={modalRef} onClick={closeModal}> 
 					<animated.div style={animation}>
 						<ModalWrapper>
-							<ModalImg src={'https://images.pexels.com/photos/5957128/pexels-photo-5957128.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'} alt='camera' />
+							<a href="https://days-in-paris.netlify.app/" target="_blank" rel="noreferrer">
+								{textContent == 'intro' ? (
+									<ModalImg src={eiffel} alt='Tour Eiffel' />
+								)
+									:(
+										<ModalImg src={louvre} alt='Louvre' />
+									)}
+							</a>
 							<ModalContent>
-								<h1>Ready ?</h1>
-								<p>Hello World</p>
+								{textContent == 'intro' ? <Dip /> : <DipContent />}
+								<ArrowModal setTextContent={setTextContent} textContent={textContent} />
+								
+								
+								
 							</ModalContent>
 							<CloseModalButton aria-label='Close modal' onClick={() => setShowModal(prev => !prev)} />
 						</ModalWrapper>

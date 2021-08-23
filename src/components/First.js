@@ -46,7 +46,7 @@ class FirstPage extends Component {
 						<h1>Fullstack Web and Application Developer <br /> Javascript - NodeJS / React</h1>
 
 						<Welcome>
-							Bonjour, je m&#39;appelle <strong>Louis</strong>. Un développeur Full-Stack qui habite à <strong>Paris</strong>. Je suis spécialisé dans la création d&#39;expériences créatives et d&#39;interfaces fonctionnelles en utilisant <strong>Javascript</strong> (<em className="reactcolor">React</em> pour la partie Front et <em className="nodecolor">NodeJS</em> pour le Back).
+							Bonjour, je m&#39;appelle <strong>Louis</strong>. Un développeur Full-Stack qui habite à <strong>Paris</strong>. Je suis spécialisé dans la conception d&#39;expériences créatives et d&#39;interfaces fonctionnelles en utilisant <strong>Javascript</strong> (<em className="reactcolor">React</em> pour la partie Front et <em className="nodecolor">NodeJS</em> pour le Back).
 							<br/><br/>
 							Je suis aujourd&#39;hui à la recherche d&#39;un <strong>premier emploi</strong> et mettre en application mes compétences !
 						</Welcome>
