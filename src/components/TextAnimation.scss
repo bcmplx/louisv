@@ -1,0 +1,190 @@
+// Learn more:
+// @link https://dev.to/5t3ph/pure-css-typing-animation-1nld
+
+// "Type" width
+// - controls how much the word container expands when each letter is "typed"
+// - will need adjusted depending on word and typeface
+$chWidth: 0.49em;
+// Word length
+$chCountOne: 14;
+$chCountTwo: 64;
+$chCountThree: 62;
+// Typing animation length
+$typeDurationOne: 130ms * $chCountOne;
+$typeDurationTwo: 4s;
+$typeDurationThree: 3s;
+
+$color: #fefefe;
+$bg: #181818;
+$cursor: scale-color($color, $lightness: -60%);
+
+.type-animationOne {
+	// Required for keeping expected alignment
+	display: inline-flex;
+	flex-wrap: nowrap;
+	// Start out by hiding via width and overflow
+	width: 0%;
+	overflow: hidden;
+	// Leave room for cursor!
+	padding-right: 0.05em;
+	position: relative;
+	// height: 10vh;
+	white-space: nowrap;
+
+	&:after {
+		content: "";
+		background: $bg;
+		position: absolute;
+		right: 0;
+		top: -0.05em;
+		bottom: -0.05em;
+		width: 0.07em;
+		border-right: 2px solid transparent;
+	}
+
+	&.animating {
+		animation: type $typeDurationOne;
+		// "stick" to last frame
+		animation-fill-mode: forwards;
+		animation-delay: 6s;
+
+		&:after {
+			$cursorLoopCount: ((($chCountOne + 1) * 170)/100) + 3;
+			animation: cursor 320ms $cursorLoopCount ease-in-out;
+			animation-delay: 1s;
+		}
+	}
+}
+.type-animationTwo {
+	// Required for keeping expected alignment
+	display: inline-flex;
+	flex-wrap: nowrap;
+	// Start out by hiding via width and overflow
+	width: 0%;
+	overflow: hidden;
+	// Leave room for cursor!
+	padding-right: 0.05em;
+	position: relative;
+	// height: 10vh;
+	white-space: nowrap;
+
+	&:after {
+		content: "";
+		background: $bg;
+		position: absolute;
+		right: 0;
+		top: -0.05em;
+		bottom: -0.05em;
+		width: 0.07em;
+		border-right: 2px solid transparent;
+	}
+
+	&.animating {
+		animation: typetwo $typeDurationTwo;
+		// "stick" to last frame
+		animation-fill-mode: forwards;
+		animation-delay: 10s;
+
+		&:after {
+			$cursorLoopCount: ((($chCountTwo + 1) * 180)/100) + 3;
+			animation: cursor 320ms $cursorLoopCount ease-in-out;
+			animation-delay: 10s;
+		}
+	}
+}
+.type-animationThree {
+	// Required for keeping expected alignment
+	display: inline-flex;
+	// flex-wrap: wrap;
+	// Start out by hiding via width and overflow
+	width: 0%;
+	overflow: hidden;
+	// Leave room for cursor!
+	padding-right: 0.05em;
+	position: relative;
+	margin: auto;
+	// height: 10vh;
+	// white-space: nowrap;
+
+	&:after {
+		content: "";
+		background: $bg;
+		position: relative;
+		right: 0;
+		top: -0.05em;
+		bottom: -0.05em;
+		width: 0.07em;
+		border-right: 2px solid transparent;
+	}
+
+	&.animating {
+		animation: typethree $typeDurationThree;
+		// "stick" to last frame
+		animation-fill-mode: forwards;
+		animation-delay: 1s;
+
+		&:after {
+			$cursorLoopCount: ((($chCountThree + 1) * 180)/100) + 3;
+			animation: cursor 320ms $cursorLoopCount ease-in-out;
+			animation-delay: 1s;
+		}
+	}
+}
+
+@keyframes cursor {
+	0%,
+	100% {
+		border-color: $bg;
+	}
+	50% {
+		border-color: $cursor;
+	}
+	100% {
+		width: 0;
+	}
+}
+
+$frameSize: 100 / $chCountOne;
+@keyframes type {
+	@for $ch from 1 to $chCountOne {
+		$frame: $ch * $frameSize;
+		#{$frame}% {
+			width: $ch * $chWidth;
+		}
+	}
+	100% {
+		width: ($chCountOne  - 1) * $chWidth;
+		padding-right: 0;
+	}
+}
+$frameSizeTwo: 110 / $chCountTwo;
+@keyframes typetwo {
+	@for $ch from 1 to $chCountTwo {
+		$frame: $ch * $frameSizeTwo;
+		#{$frame}% {
+			width: $ch * $chWidth + 1;
+		}
+	}
+	100% {
+		width: ($chCountTwo  - 1) * $chWidth;
+		padding-right: 0;
+	}
+}
+$frameSizeThree: 120 / $chCountThree;
+@keyframes typethree {
+	@for $ch from 1 to $chCountThree {
+		$frame: $ch * $frameSizeThree;
+		#{$frame}% {
+			width: $ch * $chWidth + 1;
+		}
+	}
+	100% {
+		width: ($chCountThree  - 1) * $chWidth;
+		padding-right: 0;
+	}
+}
+
+.delayanim {
+	animation-delay: 3s;
+}
+

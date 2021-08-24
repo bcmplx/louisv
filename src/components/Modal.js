@@ -127,10 +127,28 @@ export const Modal = ({showModal, setShowModal}) => {
 		}
 	}, [setShowModal, showModal]);
 
+	const arrowPress = useCallback(a => {
+		// console.log(a.key);
+		if(a.key === 'ArrowRight' && showModal) {
+			setTextContent('dip');
+		}
+		else if(a.key === 'ArrowLeft' && showModal) {
+			setTextContent('intro');
+		}
+		else if(a.key === 'ArrowUp' && showModal) {
+			setTextContent('intro');
+		}
+		else if(a.key === 'ArrowDown' && showModal) {
+			setTextContent('dip');
+		}
+	}, [setTextContent, showModal]);
+
 	useEffect(() => {
 		document.addEventListener('keydown', keyPress);
+		document.addEventListener('keydown', arrowPress);
 		return () => {
 			document.removeEventListener('keydown', keyPress) ;
+			document.removeEventListener('keydown', arrowPress) ;
 		} ;
 	}, [keyPress]);
 

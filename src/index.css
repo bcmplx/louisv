@@ -61,10 +61,13 @@ strong:hover::before {
 
 .reactcolor {
   color: #5CD9FF;
+  margin: 0 2%;
 }
 
 .nodecolor {
   color: #026e00;
+
+  margin: 0 2%;
 }
 
 .contentpageone {
@@ -77,8 +80,8 @@ strong:hover::before {
   background: linear-gradient(-45deg, #026e00, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-  margin: 3% 7% 5% 7%;
-  font-size: 3.2rem;
+  margin: 3% 7% 4% 7%;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.1;
   border-radius: 9px; 
