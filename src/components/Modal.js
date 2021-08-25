@@ -19,7 +19,7 @@ const Background = styled.div`
     justify-content: center;
     align-items: center; 
     overflow-y: hidden;
-    z-index: 2;
+    z-index: 1;
 `;
 
 const ModalWrapper = styled.div`
@@ -28,13 +28,19 @@ const ModalWrapper = styled.div`
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
     background: #fff;
     color: #000;
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     /* position: fixed; */
     /* top: 10%; */
-    z-index: 200;
+    z-index: 2;
     border-radius: 10px;
 	overflow-y: hidden;
+	
+	a {
+
+		text-align: left;
+	}
+
 	img {
 		margin: 0;
 	}
@@ -59,8 +65,10 @@ const ModalContent = styled.div`
     align-items: center;
     line-height: 1.8;
     color: #141414;
-    overflow-y: hidden;
-	margin: 0 5% 0 -30%;
+	width: 150%; 
+	padding: 5%;
+	margin: 0 1%;
+	z-index: 3;
 
     p {
         margin-bottom: 1rem;
@@ -91,7 +99,8 @@ const CloseModalButton = styled(MdClose)`
 
 export const Modal = ({showModal, setShowModal}) => {
 
-	// console.log(this.props);
+	console.log(showModal);
+	// setShowModal(false);
 
 	const [textContent, setTextContent] = useState('intro');
 
@@ -116,30 +125,40 @@ export const Modal = ({showModal, setShowModal}) => {
 	});
 
 	const closeModal = e => {
-		if(modalRef.current  === e.target) {
+		console.log('in closeModal');
+		// console.log(e.target);
+		// console.log(modalRef.current);
+		if(modalRef.current  == e.target) {
+			console.log('in closeModal modalRef.current == e.target');
+			// console.log(setShowModal);
 			setShowModal(false);
 		}
 	};
 
 	const keyPress = useCallback(e => {
 		if(e.key === 'Escape' && showModal) {
+			console.log('in keyPress Escape');
 			setShowModal(false);
 		}
 	}, [setShowModal, showModal]);
 
 	const arrowPress = useCallback(a => {
-		// console.log(a.key);
-		if(a.key === 'ArrowRight' && showModal) {
-			setTextContent('dip');
-		}
-		else if(a.key === 'ArrowLeft' && showModal) {
-			setTextContent('intro');
-		}
-		else if(a.key === 'ArrowUp' && showModal) {
-			setTextContent('intro');
-		}
-		else if(a.key === 'ArrowDown' && showModal) {
-			setTextContent('dip');
+		if (showModal) {
+			switch(a.key) {
+			case 'ArrowRight':
+				setTextContent('dip');
+				break;
+			case 'ArrowDown':
+				setTextContent('dip');
+				break;
+			
+			case 'ArrowLeft':
+				setTextContent('intro');
+				break;
+			case 'ArrowUp':
+				setTextContent('intro');
+				break;
+			}
 		}
 	}, [setTextContent, showModal]);
 
@@ -172,12 +191,9 @@ export const Modal = ({showModal, setShowModal}) => {
 							</a>
 							<ModalContent>
 								{textContent == 'intro' ? <Dip /> : <DipContent />}
-								<ArrowModal setTextContent={setTextContent} textContent={textContent} />
-								
-								
-								
+								<ArrowModal setTextContent={setTextContent} textContent={textContent} />							
 							</ModalContent>
-							<CloseModalButton aria-label='Close modal' onClick={() => setShowModal(prev => !prev)} />
+							<CloseModalButton aria-label='Close modal' onClick={() => setShowModal(false)} />
 						</ModalWrapper>
 					</animated.div>
 				</Background>

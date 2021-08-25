@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import sass from './img/logos/sass.png';
 import bootstrap from './img/logos/bootstrap.png';
 import git from './img/logos/git.png';
-import seo from './img/logos/seo.png';
+// import seo from './img/logos/seo.png';
 // import greenit from './img/logos/greenit.png';
 import react from './img/logos/react.png';
 import nodejs from './img/logos/nodejs.png';
@@ -17,14 +17,14 @@ class Stacks extends Component {
 			color: inherit;
 			margin: auto;
 			margin-bottom: 5%;
-			width: 80%;
-			padding: 1%;
+			width: 50%;
+			/* padding: 1%; */
 			border-radius: 13px; 
-			height: 17vh;
+			/* height: 17vh; */
 			background-color: rgba(255, 255, 255, 0.2);
 
 			img {
-				width: 10%;
+				width: 15%;
 				display: inline-block;
 				margin: 0 2%; 
 				/* background: black; */
@@ -44,7 +44,7 @@ class Stacks extends Component {
 				<img src={bootstrap} alt="Bootstrap logo" className="small"/>
 				<img src={git} alt="Git logo"/>				
 				{/* <img src={greenit} alt="Greenit logo" className="small"/> */}
-				<img src={seo} alt="SEO logo" className="small"/>
+				{/* <img src={seo} alt="SEO logo" className="small"/> */}
 			</Stack>
 		);
 	}

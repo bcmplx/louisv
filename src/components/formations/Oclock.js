@@ -1,21 +1,9 @@
-import React from 'react';
-// import oclock from '../img/oclock.png';
-import styled from 'styled-components';
+import React, {Fragment} from 'react';
 
 const Oclock = () => { 
 
-	// console.log(props);
-
-
-	const Contenu = styled.div`
-		margin: auto;
-		flex-direction: column;
-		display: inline-block;
-
-	`;
-
 	return(
-		<Contenu> 
+		<> 
 			<h3>2021 - Oclock</h3>
 			<p>[Formation labellisée GEN]</p>
 			<p><strong>Formation Développeur web & fullstack JS</strong></p>
@@ -30,7 +18,7 @@ const Oclock = () => {
 				<li>Techniques de OWASP</li>
 				<li>Manipuler des bases de données SQL</li>
 			</ul>
-		</Contenu>
+		</>
 
 	);
 };

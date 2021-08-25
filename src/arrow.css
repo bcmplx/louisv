@@ -4,7 +4,7 @@ a {
 }
 .arrow {
   text-align: center;
-  margin: 2% 0 10% 0;
+  margin: 1% 2% 5% 2%;
 }
 .bounce {
   -moz-animation: bounce 2s infinite;

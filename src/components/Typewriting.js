@@ -5,8 +5,9 @@ const Typewriting = () => {
 	useEffect(() => {
 		// console.log(element.current);
 		var aText = new Array(
-			'There are only 10 types of people in the world:', 
-			'Those who understand binary, and those who dont'
+			'Aujourd’hui je suis à la recherche d’un <strong>CDI</strong>.',
+			// 'There are only 10 types of people in the world:', 
+			// 'Those who understand binary, and those who dont'
 		);
 		var iSpeed = 1; // time delay of print out
 		var iIndex = 0; // start printing array at this posision
@@ -28,7 +29,7 @@ const Typewriting = () => {
 				sContents += aText[iRow++] + '<br />';
 				
 			}
-			destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + '_';
+			destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos);
 			if ( iTextPos++ == iArrLength ) {
 				iTextPos = 0;
 				iIndex++;

@@ -1,11 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import Header from './header/Header';
-import Prestation from './Prestation';
-// import Form from './Form';
 import Stacks from './Stacks';
-import Formation from './formations/Formation';
 import styled from 'styled-components';
-import Contact from './Contact';
 import Introduction from './Introduction';
 
 
@@ -24,14 +20,13 @@ class FirstPage extends Component {
             opacity: 0.04;
         `;
 
-		
-
 		const FirstPage = styled.div`
-			height: 100vh
+			display: flex;
+			flex-direction: column;
 		`;
 
 		return (
-			<Fragment>
+			<>
 				<BackgroundImg src="https://images.pexels.com/photos/7078272/pexels-photo-7078272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="background"/>
 				<FirstPage>
 					<Header />
@@ -45,30 +40,9 @@ class FirstPage extends Component {
 						</div>
 					</div>
 				</FirstPage>
-				<div className="contentpageone">
-					<div id="realisations"></div>
-					<h2>Réalisations</h2>
-					<div className="prestations">                       
-						<Prestation name="Days in Paris" />
-						<Prestation name="presta 2" />
-						
-					</div>
-					<div id="formation"></div>
-					<h2>Formations</h2>
-					<Formation photos="oclock" />
-					<Formation photos="ocr" />
-					
-					<h2 id="contact">Contact</h2>
-					<div className="prestations">   
-						<Contact />                    
-						{/* <Form /> */}
-					</div>
-
-
-				</div>
 				
 				
-			</Fragment>
+			</>
 		);
 	}
 }

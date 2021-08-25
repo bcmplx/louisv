@@ -20,21 +20,44 @@ class Formation extends Component {
 			justify-content: center;
 			align-items: center;
 			border: 1px solid #fefefe;
-			padding: 4%;
+			padding: 2%;
 			border-radius: 7px; 
 
 			img {
 				width: 30%;
-				margin-bottom: 15%;
-				display: inline-block;
+				display: flex;
+				align-self: start;
+				margin: 1%;
+				border-radius: 6px; 
 			}
+		`;
+		const Contenu = styled.div`
+		margin: 1%;
+		padding: 2%;
+		flex-direction: column;
+		display: inline-block;
+		background: #141414;
+		border-radius: 7px; 
 		`;
 
 		return(
 			
 			<Format>
-				{this.props.photos === 'oclock' ? <img src={oclock} alt="Oclock"/> : <img src={ocr} alt="OpenclassRooms"/>}
-				{this.props.photos === 'oclock' ? <Oclock /> : <Ocr />}
+				{this.props.photos === 'oclock' ? (
+					<img src={oclock} alt="Oclock"/>
+				) : (
+					<img src={ocr} alt="OpenclassRooms"/>
+				)}
+
+				{this.props.photos === 'oclock' ? (
+					<Contenu>
+						<Oclock />
+					</Contenu>
+				) : (
+					<Contenu>
+						<Ocr />
+					</Contenu>
+				)}
 				
 			</Format>
 

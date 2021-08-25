@@ -17,9 +17,7 @@ class Contact extends Component {
 				align-items: center;
 				height: 4vh
 			}
-			i {
-				padding: 80%;
-			}
+			
 			i::before {
 				/* padding: 15% !important; */
 			}
@@ -71,15 +69,15 @@ class Contact extends Component {
 		return(
 			<Contact className="footer__video--titre">
 				<p>Louis Villain</p>
-				<p><a href="mailto:louis.villainl@gmail.com">louis.villainl@gmail.com</a></p>
+				<p><a href="mailto:louis.villainl@gmail.com?subject = Informations&body = Posez vos questions ici">louis.villainl@gmail.com</a></p>
 				<p>06 27 57 05 61</p>  
 				<ul className="social-icons">
 					<li>Github: </li>
-					<li><a href="https://github.com/bcmplx/" className="social-icon" target="_blank" rel="noreferrer"> <i className="fa fa-github"></i></a></li>
+					<li><a href="https://github.com/bcmplx/" className="social-icon" target="_blank" rel="noreferrer"> <i className="fa fa-github icon"></i></a></li>
 				</ul>
 				<ul className="social-icons">
 					<li>LinkedIn:</li>
-					<li><a href="https://www.linkedin.com/in/louis-villain-71aa85170/" className="social-icon" target="_blank" rel="noreferrer"> <i className="fa fa-linkedin"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/louis-villain-71aa85170/" className="social-icon" target="_blank" rel="noreferrer"> <i className="fa fa-linkedin icon"></i></a></li>
 				</ul>
 			</Contact>  
 		);
