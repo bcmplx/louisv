@@ -13,14 +13,9 @@ class Header extends Component {
 		const Logo = styled.a `
 			display: flex;
 			align-items: center;
-			font-size: 2.8rem;
-			margin: 0% 2%;
-			font-weight: 1000;
-
 			.waviy:hover {
 				animation: waviy 1s infinite;
 			}
-
 			.waviy span {
 				position: relative;
 				display: inline-block;
@@ -32,7 +27,6 @@ class Header extends Component {
 				animation: inherit;
 				animation-delay: 0.1s;
 			};
-			
 			.deux {
 				animation: inherit;
 				animation-delay: 0.2s;
@@ -57,7 +51,6 @@ class Header extends Component {
 				animation: inherit;
 				animation-delay: 0.7s ;
 			};
-
 			@keyframes waviy {
 				0%,
 				40%,
@@ -68,7 +61,20 @@ class Header extends Component {
 					transform: translateY(-20px);
 				}
 			}
-			
+			@media only screen and (min-width: 1400px){
+				font-size: 2.8rem;
+				margin: 0% 2%;
+				font-weight: 1000;
+			}
+			@media only screen and (min-width: 1200px) and (max-width: 1399px){
+				font-size: 2rem;
+				margin: 2% 2%;
+				font-weight: 1000;
+			}
+			@media only screen and (min-width: 992px) and (max-width: 1199px){}
+			@media only screen and (min-width: 768px) and (max-width: 991px){}
+			@media only screen and (min-width: 577px) and (max-width: 767px){}
+			@media only screen and (max-width: 576px){}
 		`;
 		return (
 			<div className="header" id="header">

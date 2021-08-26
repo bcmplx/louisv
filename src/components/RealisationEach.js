@@ -28,7 +28,7 @@ const RealisationEach = props => {
 		
 
 		p{
-		font-size: 2rem;
+		font-size: 1.5rem;
 		}
 		img{
 			width: 70%;

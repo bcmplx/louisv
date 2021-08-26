@@ -15,23 +15,38 @@ class Stacks extends Component {
 
 		const Stack = styled.div`
 			color: inherit;
-			margin: auto;
-			margin-bottom: 5%;
-			width: 50%;
-			/* padding: 1%; */
+			margin: auto;	
 			border-radius: 13px; 
-			/* height: 17vh; */
 			background-color: rgba(255, 255, 255, 0.2);
 
-			img {
-				width: 15%;
-				display: inline-block;
-				margin: 0 2%; 
-				/* background: black; */
+			@media only screen and (min-width: 1400px){
+				margin-bottom: 5%;
+				width: 50%;
+				img {
+					width: 15%;
+					display: inline-block;
+					margin: 0 2%; 
+				}
+				img.small {
+					width: 7%
+				}
 			}
-			img.small {
-				width: 7%
+			@media only screen and (min-width: 1200px) and (max-width: 1399px){
+				margin-bottom: 5%;
+				width: 80%;
+				img {
+					width: 15%;
+					display: inline-block;
+					margin: 0 2%; 
+				}
+				img.small {
+					width: 7%
+				}
 			}
+			@media only screen and (min-width: 992px) and (max-width: 1199px){}
+			@media only screen and (min-width: 768px) and (max-width: 991px){}
+			@media only screen and (min-width: 577px) and (max-width: 767px){}
+			@media only screen and (max-width: 576px){}
 		`;
 
 

@@ -5,14 +5,22 @@ const Nav = () => {
 
 	const Nav = styled.nav`
 		display: flex;
-		/* align-items: center; */
-		width: 10%;
 		color: #fefefe;
-		line-height: 3;
-		/* background: url("https://images.pexels.com/photos/2117937/pexels-photo-2117937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
-		margin-left: 40%;
-		margin-right: 2%;
-		padding-bottom: 1%;
+
+		@media only screen and (min-width: 1400px){
+		
+			width: 10%;
+			line-height: 3;
+			margin-left: 40%;
+			margin-right: 2%;
+			padding-bottom: 1%;
+		}
+		@media only screen and (min-width: 1400px){}
+		@media only screen and (min-width: 1200px) and (max-width: 1399px){}
+		@media only screen and (min-width: 992px) and (max-width: 1199px){}
+		@media only screen and (min-width: 768px) and (max-width: 991px){}
+		@media only screen and (min-width: 577px) and (max-width: 767px){}
+		@media only screen and (max-width: 576px){}
 	`;
 
 	return (
