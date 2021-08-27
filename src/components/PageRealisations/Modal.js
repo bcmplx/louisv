@@ -2,11 +2,11 @@ import React, {useRef, useEffect, useCallback, useState} from 'react';
 import { useSpring, animated } from 'react-spring';
 import styled from 'styled-components';
 import {MdClose} from 'react-icons/md';
-import eiffel from './img/eiffel.jpeg';
-import louvre from './img/louvre.jpg';
+import eiffel from '../img/eiffel.jpeg';
+import louvre from '../img/louvre.jpg';
 import Dip from './Dip';
 import DipContent from './DipContent';
-import ArrowModal from './ArrowModal';
+import ArrowModal from '../ArrowModal';
 
 const Background = styled.div`
     width: 100%;

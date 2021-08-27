@@ -1,11 +1,6 @@
 import React, {Component} from 'react';
-import Formations from './Formations';
 import Realisations from './Realisations';
 import styled from 'styled-components';
-import Contact from './Contact';
-
-
-import '../arrow.css';
 
 class SecondPage extends Component {
 
@@ -20,15 +15,6 @@ class SecondPage extends Component {
 			<SecondPage>
 				<div className="contentpagetwo">
 					<Realisations />
-					<div id="formation"></div>
-					<Formations />
-					
-					<h2 id="contact">Contact</h2>
-					<div className="prestations">   
-						<Contact />     
-					</div>
-
-
 				</div>
 			</SecondPage>
 		);

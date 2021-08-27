@@ -8,8 +8,6 @@ const Ocr = () => {
 			<p>[Formation labellisée GEN]</p>
 			<p><strong>Prep&apos; web</strong></p>
 			<ul> 
-				<li> - </li>
-				<li> <br/> </li>
 				<li>HTML5 et CSS3 : de la maquette à la page web</li>
 				<li>Respect des normes W3C</li>
 				<li>Format responsive (Media Queries)</li>

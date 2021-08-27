@@ -13,7 +13,8 @@ class Formation extends Component {
 		// console.log(photo);
 
 		const Format = styled.div`
-			width: 70%;
+			/* height: 90vh; */
+			width: 60%;
 			margin: auto;
 			margin-bottom: 1%;
 			display: flex;
@@ -27,17 +28,24 @@ class Formation extends Component {
 				width: 30%;
 				display: flex;
 				align-self: start;
-				margin: 1%;
+				margin: 0 1%;
 				border-radius: 6px; 
 			}
 		`;
 		const Contenu = styled.div`
-		margin: 1%;
+		margin: 0 1%;
 		padding: 2%;
 		flex-direction: column;
 		display: inline-block;
 		background: #141414;
 		border-radius: 7px; 
+		max-height: 36vh;
+		p strong {
+			line-height: 0.7;
+		}
+		h3 {
+			line-height: 0.5;
+		}
 		`;
 
 		return(

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import Typewriting from './Typewriting';
-import './TextAnimation.css';
+import Typewriting from '../Typewriting';
+import '../TextAnimation.css';
 
 
 class Introduction extends Component {
@@ -17,7 +17,7 @@ class Introduction extends Component {
 
 			@media only screen and (min-width: 1400px){
 				font-size: 2.2rem;
-				margin: 7% 7% 3% 7%;
+				margin: 7%;
 			}
 			@media only screen and (min-width: 1200px) and (max-width: 1399px){
 				font-size: 2rem;

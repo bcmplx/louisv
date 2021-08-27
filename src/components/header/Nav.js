@@ -30,7 +30,7 @@ const Nav = () => {
 					<li><a href="#realisations">Réalisations</a></li>
 				</div>
 				<div role="link" tabIndex="0">
-					<li><a href="#formation">Formations</a></li>
+					<li><a href="#formations">Formations</a></li>
 				</div>
 				<div role="link" tabIndex="0">
 					<li><a href="#contact">Contact</a></li>

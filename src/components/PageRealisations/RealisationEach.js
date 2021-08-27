@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 // import {Fragment} from 'react';
 import styled from 'styled-components';
-import dip from './img/dip.png';
-import jamendo from './img/jamendo.svg';
+import dip from '../img/dip.png';
+import jamendo from '../img/jamendo.svg';
 // import { GlobalStyle } from '../globalStyles';
 import {Modal} from './Modal';
 
@@ -17,24 +17,41 @@ const RealisationEach = props => {
 	`;
 
 	const Link = styled.a`
-		min-width: 100px;
-		padding: 16px 32px;
 		border-radius: 4px;
 		border: none;
 		background: #141414;
 		color: #fff;
-		/* font-size: 24px; */
-		cursor: pointer;
-		
+		cursor: pointer;	
 
-		p{
-		font-size: 1.5rem;
+		@media only screen and (min-width: 1400px){
+			min-width: 100px;
+			padding: 16px 32px;
+			p{
+				font-size: 1.5rem;
+			}
+			img{
+				width: 100%;
+				height: 90%;
+				margin: auto;
+				margin-bottom: 1%;
+			}
 		}
-		img{
-			width: 70%;
-			margin: auto;
-			margin-bottom: 1%;
+		@media only screen and (min-width: 1200px) and (max-width: 1399px){
+			min-width: 100px;
+			padding: 16px 32px;
+			p{
+				font-size: 1.3rem;
+			}
+			img{
+				width: 80%;
+				margin: auto;
+				margin-bottom: 1%;
+			}
 		}
+		@media only screen and (min-width: 992px) and (max-width: 1199px){}
+		@media only screen and (min-width: 768px) and (max-width: 991px){}
+		@media only screen and (min-width: 577px) and (max-width: 767px){}
+		@media only screen and (max-width: 576px){}
 	`;
 	const [showModal, setShowModal] = useState(false);
 

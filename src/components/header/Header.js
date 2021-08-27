@@ -8,7 +8,15 @@ class Header extends Component {
 
 
 	render() {
-		// var style = { "--i": 1 } as React.CSSProperties; 
+
+		const BackgroundImg = styled.img`
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: auto;
+			opacity: 0.04;
+		`;
 
 		const Logo = styled.a `
 			display: flex;
@@ -78,6 +86,8 @@ class Header extends Component {
 		`;
 		return (
 			<div className="header" id="header">
+				<BackgroundImg src="https://images.pexels.com/photos/7078272/pexels-photo-7078272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="background"/>
+
 				<Logo href="#top">
 					<p> 
 						<div className="waviy">

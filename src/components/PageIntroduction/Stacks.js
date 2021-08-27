@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import sass from './img/logos/sass.png';
-import bootstrap from './img/logos/bootstrap.png';
-import git from './img/logos/git.png';
+import sass from '../img/logos/sass.png';
+import bootstrap from '../img/logos/bootstrap.png';
+import git from '../img/logos/git.png';
 // import seo from './img/logos/seo.png';
 // import greenit from './img/logos/greenit.png';
-import react from './img/logos/react.png';
-import nodejs from './img/logos/nodejs.png';
+import react from '../img/logos/react.png';
+import nodejs from '../img/logos/nodejs.png';
 
 
 class Stacks extends Component {
