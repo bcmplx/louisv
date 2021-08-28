@@ -18,7 +18,7 @@ class Stacks extends Component {
 			margin: auto;	
 			border-radius: 13px; 
 			background-color: rgba(255, 255, 255, 0.2);
-			width: 60vw;
+			width: 100%;
 
 			img {
 				width: 7vw;

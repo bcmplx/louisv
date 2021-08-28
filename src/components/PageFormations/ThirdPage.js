@@ -10,13 +10,13 @@ class ThirdPage extends Component {
 		const ThirdPage = styled.div`
 			display: flex;
 			flex-direction: column;
-			z-index: 3;
+			z-index: 2;
 			justify-content: space-between;
 		`;
 
 		return (
 			<ThirdPage className="contentpagetwo"> 
-				<div id="formations"></div>
+				
 				<Formations />				
 			</ThirdPage>
 		);

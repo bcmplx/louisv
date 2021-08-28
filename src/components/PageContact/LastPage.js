@@ -10,15 +10,18 @@ class LastPage extends Component {
 		const LastPage = styled.div`
 			display: flex;
 			flex-direction: column;
+
+			.container {
+				width: 50vw;
+				margin: auto;
+			}
 		`;
 
 		return (
 			<LastPage>
-				<div className="contentpagetwo">
-					<h2 id="contact">Contact</h2>
-					<div className="prestations">   
-						<Contact />     
-					</div>
+				<div className="contentpagetwo container">
+					<h2 id="contact">Contact</h2>   
+					<Contact />   
 				</div>
 			</LastPage>
 		);

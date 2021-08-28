@@ -11,7 +11,7 @@ class Introduction extends Component {
 	render() {
 
 		const Welcome = styled.p`
-			font-size: 2vw;
+			font-size: 1.8vw;
 			font-weight: 700;
 			line-height: 1.1;
 			margin: 3rem;
@@ -21,11 +21,25 @@ class Introduction extends Component {
 				/* margin: 7%; */
 			}
 			@media only screen and (min-width: 1200px) and (max-width: 1399px){
-				/* margin: 7% 5% 7% 5%; */
+				margin: 0;
+				padding: 2vw 0;
+				font-size: 1.95vw;
 			}
-			@media only screen and (min-width: 992px) and (max-width: 1199px){}
-			@media only screen and (min-width: 768px) and (max-width: 991px){}
-			@media only screen and (min-width: 577px) and (max-width: 767px){}
+			@media only screen and (min-width: 992px) and (max-width: 1199px){
+				margin: 0;
+				padding: 2vw 0;
+				font-size: 2.1vw;
+			}
+			@media only screen and (min-width: 768px) and (max-width: 991px){
+				margin: 0;
+				padding: 2vw 0;
+				font-size: 2.2vw;
+			}
+			@media only screen and (min-width: 577px) and (max-width: 767px){
+				margin: 0;
+				padding: 0vw 0;
+				font-size: 2.8vw;
+			}
 			@media only screen and (max-width: 576px){}
 
 		`;

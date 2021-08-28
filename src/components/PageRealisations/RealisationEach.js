@@ -12,8 +12,13 @@ const RealisationEach = props => {
 		display: flex;
 		justify-content: center ;
 		align-items: center; 
-		width: 100%;
-    	height: 100%;
+		margin: auto;
+		width: 70%;
+		height: 100%;
+
+		@media only screen and (min-width: 577px) and (max-width: 767px){
+			width: 90%;
+		}
 		
 	`;
 
@@ -24,11 +29,11 @@ const RealisationEach = props => {
 		color: #fff;
 		cursor: pointer;
 		padding: 16px 32px;	
-		width: 100%;
+		width: 90%;
     	/* height: 100%; */
 
 		p{
-			font-size: 1.5vw;
+			font-size: 1.4vw;
 		}
 
 		img{
@@ -46,7 +51,11 @@ const RealisationEach = props => {
 		}
 		@media only screen and (min-width: 992px) and (max-width: 1199px){}
 		@media only screen and (min-width: 768px) and (max-width: 991px){}
-		@media only screen and (min-width: 577px) and (max-width: 767px){}
+		@media only screen and (min-width: 577px) and (max-width: 767px){
+			p{
+			font-size: 2.2vw;
+		}
+		}
 		@media only screen and (max-width: 576px){}
 	`;
 	const [showModal, setShowModal] = useState(false);

@@ -8,21 +8,14 @@ import Ocr from './Ocr';
 class Formation extends Component {
 	render() {
 
-		// console.log(this.props.photos);
-		// const photo = require(`../img/${this.props.photos}.png`);
-		// console.log(photo);
+
 
 		const Format = styled.div`
-			/* height: 90vh; */
-			/* width: 50vh; */
 			margin: auto;
 			margin-bottom: 1%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			/* border: 1px solid #fefefe;
-			padding: 2%;
-			border-radius: 7px;  */
 
 			img {
 				width: 30%;
@@ -31,21 +24,30 @@ class Formation extends Component {
 				margin: 0 1%;
 				border-radius: 6px; 
 			}
+
+			@media only screen and (min-width: 577px) and (max-width: 767px){
+				flex-direction: column;
+				img {
+					margin: auto;
+					margin-bottom: 1vw;
+				}
+			}
 		`;
+
 		const Contenu = styled.div`
-		margin: 0 1%;
-		padding: 2%;
-		flex-direction: column;
-		display: inline-block;
-		background: #141414;
-		border-radius: 7px; 
-		/* max-height: 36vh; */
-		p strong {
-			line-height: 0.7;
-		}
-		h3 {
-			line-height: 0.5;
-		}
+			margin: 0 1%;
+			padding: 2%;
+			flex-direction: column;
+			display: inline-block;
+			background: #141414;
+			border-radius: 7px; 
+			/* max-height: 36vh; */
+			p strong {
+				line-height: 0.7;
+			}
+			h3 {
+				line-height: 0.5;
+			}
 		`;
 
 		return(

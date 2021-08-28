@@ -16,7 +16,7 @@ const Nav = () => {
 
 		ul {
 			list-style-type: none;
-			font-size: 1.6vw;
+			
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
@@ -54,14 +54,31 @@ const Nav = () => {
 		
 
 		@media only screen and (min-width: 1400px){
-		
+			ul {
+				font-size: 1.4vw;
+			}
 			
 		}
-		@media only screen and (min-width: 1400px){}
-		@media only screen and (min-width: 1200px) and (max-width: 1399px){}
-		@media only screen and (min-width: 992px) and (max-width: 1199px){}
-		@media only screen and (min-width: 768px) and (max-width: 991px){}
-		@media only screen and (min-width: 577px) and (max-width: 767px){}
+		@media only screen and (min-width: 1200px) and (max-width: 1399px){
+			ul {
+				font-size: 1.5vw;
+			}
+		}
+		@media only screen and (min-width: 992px) and (max-width: 1199px){
+			ul {
+				font-size: 1.7vw;
+			}
+		}
+		@media only screen and (min-width: 768px) and (max-width: 991px){
+			ul {
+				font-size: 2.2vw;
+			}
+		}
+		@media only screen and (min-width: 577px) and (max-width: 767px){
+			ul {
+				font-size: 2.4vw;
+			}
+		}
 		@media only screen and (max-width: 576px){}
 	`;
 

@@ -18,7 +18,11 @@ class Header extends Component {
 			margin: 3rem 0rem 0rem 0rem;
 			height: 7.5rem;
 			box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
-			z-index: 2;
+			z-index: 1;
+
+			@media only screen and (min-width: 577px) and (max-width: 767px){
+				margin: 2rem 0rem 0rem 0rem;
+			}
 		`;		
 
 		const Logo = styled.a `
@@ -82,10 +86,23 @@ class Header extends Component {
 				/* font-size: 2rem; */
 				margin: 2% 2%;
 				font-weight: 1000;
+				font-size: 2.9vw;
 			}
-			@media only screen and (min-width: 992px) and (max-width: 1199px){}
-			@media only screen and (min-width: 768px) and (max-width: 991px){}
-			@media only screen and (min-width: 577px) and (max-width: 767px){}
+			@media only screen and (min-width: 992px) and (max-width: 1199px){
+				margin: 2% 2%;
+				font-weight: 1000;
+				font-size: 3.2vw;
+			}
+			@media only screen and (min-width: 768px) and (max-width: 991px){
+				margin: 2% 2%;
+				font-weight: 1000;
+				font-size: 3.5vw;
+			}
+			@media only screen and (min-width: 577px) and (max-width: 767px){
+				margin: 2% 2%;
+				font-weight: 1000;
+				font-size: 3.7vw;
+			}
 			@media only screen and (max-width: 576px){}
 		`;
 		return (

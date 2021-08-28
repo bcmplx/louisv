@@ -5,7 +5,7 @@ class Contact extends Component {
 	render() {
 
 		const Contact = styled.div`
-			/* margin: 5% 0; */
+			width: 50vw;
 			margin-bottom: 5%;
 			margin-top: 2%;
 
@@ -68,6 +68,8 @@ class Contact extends Component {
 		`;
 		return(
 			<Contact className="footer__video--titre">
+
+				
 				<p>Louis Villain</p>
 				<p><a href="mailto:louis.villainl@gmail.com?subject = Informations&body = Posez vos questions ici">louis.villainl@gmail.com</a></p>
 				<p>06 27 57 05 61</p>  

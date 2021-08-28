@@ -12,7 +12,7 @@ class Formations extends Component {
 			flex-direction: column;
 			margin: auto;
 
-			z-index: 2;
+			z-index: 1;
 
 			.container {
 				margin: 3vw 0;
@@ -26,6 +26,7 @@ class Formations extends Component {
 		return (
 			<Formations>
 				<div className="container">
+					<div id="formations"></div>
 					<h2>Formations</h2>
 				
 					<Formation photos="oclock" />
