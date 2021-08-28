@@ -18,9 +18,18 @@ class AllPage extends Component {
 		flex-direction: column;
 		`;
 
+		const BackgroundImg = styled.img`
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: auto;
+		opacity: 0.04;
+		`;
+
 		return (
 			<AllPage>
-
+				<BackgroundImg src="https://images.pexels.com/photos/7078272/pexels-photo-7078272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="background"/>
 				<Header />
 				<FirstPage />				
 				<SecondPage />				

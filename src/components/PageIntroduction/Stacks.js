@@ -18,30 +18,23 @@ class Stacks extends Component {
 			margin: auto;	
 			border-radius: 13px; 
 			background-color: rgba(255, 255, 255, 0.2);
+			width: 60vw;
+
+			img {
+				width: 7vw;
+				margin: 1rem;
+			}
+			img.small {
+				width: 6vw;
+			}
 
 			@media only screen and (min-width: 1400px){
 				margin-bottom: 5%;
-				width: 50%;
-				img {
-					width: 15%;
-					display: inline-block;
-					margin: 0 2%; 
-				}
-				img.small {
-					width: 7%
-				}
+				width: 70%;
 			}
 			@media only screen and (min-width: 1200px) and (max-width: 1399px){
 				margin-bottom: 5%;
 				width: 80%;
-				img {
-					width: 15%;
-					display: inline-block;
-					margin: 0 2%; 
-				}
-				img.small {
-					width: 7%
-				}
 			}
 			@media only screen and (min-width: 992px) and (max-width: 1199px){}
 			@media only screen and (min-width: 768px) and (max-width: 991px){}

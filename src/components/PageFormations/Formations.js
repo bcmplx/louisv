@@ -10,10 +10,16 @@ class Formations extends Component {
 		const Formations = styled.div`
 			display: flex;
 			flex-direction: column;
-			height: 100vh;
+			margin: auto;
+
+			z-index: 2;
 
 			.container {
-				height: 95vh;
+				margin: 3vw 0;
+			}
+
+			strong::before {
+				background: none;
 			}
 		`;
 
@@ -24,9 +30,6 @@ class Formations extends Component {
 				
 					<Formation photos="oclock" />
 					<Formation photos="ocr" />
-				</div>
-				<div className="arrow bounce">
-					<a className="fa fa-arrow-down fa-2x" href="#contact"></a> {/* eslint-disable-line no-alert*/}
 				</div>
 			</Formations>
 		);

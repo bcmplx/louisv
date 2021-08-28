@@ -11,17 +11,17 @@ class Introduction extends Component {
 	render() {
 
 		const Welcome = styled.p`
-			
+			font-size: 2vw;
 			font-weight: 700;
 			line-height: 1.1;
+			margin: 3rem;
+			padding: 0 3vw;
 
 			@media only screen and (min-width: 1400px){
-				font-size: 2.2rem;
-				margin: 7%;
+				/* margin: 7%; */
 			}
 			@media only screen and (min-width: 1200px) and (max-width: 1399px){
-				font-size: 2rem;
-				margin: 7% 5% 7% 5%;
+				/* margin: 7% 5% 7% 5%; */
 			}
 			@media only screen and (min-width: 992px) and (max-width: 1199px){}
 			@media only screen and (min-width: 768px) and (max-width: 991px){}

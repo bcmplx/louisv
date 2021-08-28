@@ -9,13 +9,12 @@ class SecondPage extends Component {
 		const SecondPage = styled.div`
 			display: flex;
 			flex-direction: column;
+			z-index: 3;
 		`;
 
 		return (
-			<SecondPage>
-				<div className="contentpagetwo">
-					<Realisations />
-				</div>
+			<SecondPage className="contentpagetwo">
+				<Realisations />
 			</SecondPage>
 		);
 	}

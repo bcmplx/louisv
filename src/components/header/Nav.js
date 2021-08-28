@@ -6,14 +6,56 @@ const Nav = () => {
 	const Nav = styled.nav`
 		display: flex;
 		color: #fefefe;
+		/* width: 10%; */
+		line-height: 2; 
+		margin-right: 1em;
+
+		/* a {
+			line-height: 2;
+		} */
+
+		ul {
+			list-style-type: none;
+			font-size: 1.6vw;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			font-family: "Share Tech Mono", monospace;
+			flex-direction: column;
+		}
+		ul div {
+			height: 70%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			cursor: pointer;
+			text-decoration: none;
+		}
+		 ul div::before {
+			position: absolute;
+			content: "";
+			top: 0;
+			bottom: -0.01rem;
+			left: 0;
+			right: 0;
+			z-index: 0;
+			border-bottom: 3px solid #fefefe;
+			transform: scaleX(0);
+			transition: transform 0.2s ease-out;
+			pointer-events: none;
+		}
+		ul div:hover {
+			cursor: pointer;
+		}
+		 ul div:hover::before {
+			transform: scaleX(1);
+		}
+		
 
 		@media only screen and (min-width: 1400px){
 		
-			width: 10%;
-			line-height: 3;
-			margin-left: 40%;
-			margin-right: 2%;
-			padding-bottom: 1%;
+			
 		}
 		@media only screen and (min-width: 1400px){}
 		@media only screen and (min-width: 1200px) and (max-width: 1399px){}
@@ -24,7 +66,7 @@ const Nav = () => {
 	`;
 
 	return (
-		<Nav id="navbar" role="navigation">
+		<Nav role="navigation">
 			<ul>
 				<div role="link" tabIndex="0">
 					<li><a href="#realisations">Réalisations</a></li>

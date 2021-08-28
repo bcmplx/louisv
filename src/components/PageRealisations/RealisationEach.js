@@ -12,7 +12,8 @@ const RealisationEach = props => {
 		display: flex;
 		justify-content: center ;
 		align-items: center; 
-		
+		width: 100%;
+    	height: 100%;
 		
 	`;
 
@@ -21,32 +22,27 @@ const RealisationEach = props => {
 		border: none;
 		background: #141414;
 		color: #fff;
-		cursor: pointer;	
+		cursor: pointer;
+		padding: 16px 32px;	
+		width: 100%;
+    	/* height: 100%; */
+
+		p{
+			font-size: 1.5vw;
+		}
+
+		img{
+			width: 100%;
+			height: 90%;
+			margin: auto;
+			margin-bottom: 1%;
+		}
 
 		@media only screen and (min-width: 1400px){
-			min-width: 100px;
-			padding: 16px 32px;
-			p{
-				font-size: 1.5rem;
-			}
-			img{
-				width: 100%;
-				height: 90%;
-				margin: auto;
-				margin-bottom: 1%;
-			}
+
 		}
 		@media only screen and (min-width: 1200px) and (max-width: 1399px){
-			min-width: 100px;
-			padding: 16px 32px;
-			p{
-				font-size: 1.3rem;
-			}
-			img{
-				width: 80%;
-				margin: auto;
-				margin-bottom: 1%;
-			}
+
 		}
 		@media only screen and (min-width: 992px) and (max-width: 1199px){}
 		@media only screen and (min-width: 768px) and (max-width: 991px){}

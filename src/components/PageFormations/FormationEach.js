@@ -14,15 +14,15 @@ class Formation extends Component {
 
 		const Format = styled.div`
 			/* height: 90vh; */
-			width: 60%;
+			/* width: 50vh; */
 			margin: auto;
 			margin-bottom: 1%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			border: 1px solid #fefefe;
+			/* border: 1px solid #fefefe;
 			padding: 2%;
-			border-radius: 7px; 
+			border-radius: 7px;  */
 
 			img {
 				width: 30%;
@@ -39,7 +39,7 @@ class Formation extends Component {
 		display: inline-block;
 		background: #141414;
 		border-radius: 7px; 
-		max-height: 36vh;
+		/* max-height: 36vh; */
 		p strong {
 			line-height: 0.7;
 		}
@@ -49,26 +49,26 @@ class Formation extends Component {
 		`;
 
 		return(
-			
-			<Format>
-				{this.props.photos === 'oclock' ? (
-					<img src={oclock} alt="Oclock"/>
-				) : (
-					<img src={ocr} alt="OpenclassRooms"/>
-				)}
+			<div className="formationEach">
+				<Format>
+					{this.props.photos === 'oclock' ? (
+						<img src={oclock} alt="Oclock"/>
+					) : (
+						<img src={ocr} alt="OpenclassRooms"/>
+					)}
 
-				{this.props.photos === 'oclock' ? (
-					<Contenu>
-						<Oclock />
-					</Contenu>
-				) : (
-					<Contenu>
-						<Ocr />
-					</Contenu>
-				)}
-				
-			</Format>
-
+					{this.props.photos === 'oclock' ? (
+						<Contenu>
+							<Oclock />
+						</Contenu>
+					) : (
+						<Contenu>
+							<Ocr />
+						</Contenu>
+					)}
+					
+				</Format>
+			</div>
 		);
 	}		
 }

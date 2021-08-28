@@ -9,15 +9,19 @@ class Realisations extends Component {
 		const Realisations = styled.div`
 			display: flex;
 			flex-direction: column;
+			margin: auto; 
+			z-index: 3;
 
 			.container {
-				height: 95vh;
+				/* height: 95vh; */
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
+				margin: 3vw 0;
 			}
+			
 
-			height: 100vh;
+			/* height: 100vh; */
 
 			@media only screen and (min-width: 1400px){
 				/* margin: 5% 0; */
@@ -39,10 +43,6 @@ class Realisations extends Component {
 					<h2>Réalisations</h2>
 					<RealisationEach name="Days in Paris" real="1"/>
 					<RealisationEach name="Bientôt disponible" real="2"/>
-				</div>
-
-				<div className="arrow bounce">
-					<a className="fa fa-arrow-down fa-2x" href="#formations"></a> {/* eslint-disable-line no-alert*/}
 				</div>
 			</Realisations>
 		);

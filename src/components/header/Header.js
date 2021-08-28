@@ -8,19 +8,23 @@ class Header extends Component {
 
 
 	render() {
-
-		const BackgroundImg = styled.img`
+		const Header = styled.header`
+			display: flex;
+			justify-content: space-between;
 			position: fixed;
-			left: 0;
-			top: 0;
 			width: 100%;
-			height: auto;
-			opacity: 0.04;
-		`;
+			border: 1px solid transparent;
+			border-radius: 1rem;
+			margin: 3rem 0rem 0rem 0rem;
+			height: 7.5rem;
+			box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
+			z-index: 2;
+		`;		
 
 		const Logo = styled.a `
 			display: flex;
 			align-items: center;
+			font-size: 2.5vw;
 			.waviy:hover {
 				animation: waviy 1s infinite;
 			}
@@ -70,12 +74,12 @@ class Header extends Component {
 				}
 			}
 			@media only screen and (min-width: 1400px){
-				font-size: 2.8rem;
+				/* font-size: 2.8rem; */
 				margin: 0% 2%;
 				font-weight: 1000;
 			}
 			@media only screen and (min-width: 1200px) and (max-width: 1399px){
-				font-size: 2rem;
+				/* font-size: 2rem; */
 				margin: 2% 2%;
 				font-weight: 1000;
 			}
@@ -85,9 +89,7 @@ class Header extends Component {
 			@media only screen and (max-width: 576px){}
 		`;
 		return (
-			<div className="header" id="header">
-				<BackgroundImg src="https://images.pexels.com/photos/7078272/pexels-photo-7078272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="background"/>
-
+			<Header>
 				<Logo href="#top">
 					<p> 
 						<div className="waviy">
@@ -109,7 +111,7 @@ class Header extends Component {
 					</p>
 				</Logo>
 				<Nav />
-			</div>
+			</Header>
 		);
 	}
 }

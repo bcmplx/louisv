@@ -19,7 +19,7 @@ const Background = styled.div`
     justify-content: center;
     align-items: center; 
     overflow-y: hidden;
-    z-index: 1;
+    z-index: 5;
 `;
 
 const ModalWrapper = styled.div`
@@ -32,7 +32,7 @@ const ModalWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     /* position: fixed; */
     /* top: 10%; */
-    z-index: 2;
+    z-index: 5;
     border-radius: 10px;
 	overflow-y: hidden;
 	
@@ -68,7 +68,7 @@ const ModalContent = styled.div`
 	width: 150%; 
 	padding: 5%;
 	margin: 0 1%;
-	z-index: 3;
+	z-index: 4;
 
     p {
         margin-bottom: 1rem;
