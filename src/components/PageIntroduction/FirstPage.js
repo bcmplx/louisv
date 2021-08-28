@@ -63,7 +63,20 @@ class FirstPage extends Component {
 
 				}
 			}
-			@media only screen and (max-width: 576px){}
+			@media only screen and (max-width: 576px){
+				width: 87%;
+				height: calc(100vh + 1px);
+				min-height: 550px;
+
+				h1 {
+					font-size: 3.7vw;
+					margin: 10rem 2rem 3rem 2rem;
+
+				}
+				.arrow {
+					display: none;
+				}
+			}
 			
 		`;
 

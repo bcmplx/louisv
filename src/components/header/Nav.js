@@ -79,7 +79,19 @@ const Nav = () => {
 				font-size: 2.4vw;
 			}
 		}
-		@media only screen and (max-width: 576px){}
+		@media only screen and (max-width: 576px){
+			border-bottom: 2px solid #fefefe;
+			top: 0;
+			margin: auto;
+			width: 100%;
+			background: #181818;
+			z-index: 400;
+			ul {
+				flex-direction: row;
+				width: 100%;
+				z-index: 400;
+			}
+		}
 	`;
 
 	return (

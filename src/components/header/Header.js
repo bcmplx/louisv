@@ -13,7 +13,7 @@ class Header extends Component {
 			justify-content: space-between;
 			position: fixed;
 			width: 100%;
-			border: 1px solid transparent;
+			/* border: 1px solid transparent; */
 			border-radius: 1rem;
 			margin: 3rem 0rem 0rem 0rem;
 			height: 7.5rem;
@@ -22,6 +22,11 @@ class Header extends Component {
 
 			@media only screen and (min-width: 577px) and (max-width: 767px){
 				margin: 2rem 0rem 0rem 0rem;
+			}
+			@media only screen and (max-width: 576px){
+				margin: 0vw;
+				height: 3em;
+				z-index: 10;
 			}
 		`;		
 
@@ -103,7 +108,10 @@ class Header extends Component {
 				font-weight: 1000;
 				font-size: 3.7vw;
 			}
-			@media only screen and (max-width: 576px){}
+			@media only screen and (max-width: 576px){
+				display: none;
+				margin: 0vw;
+			}
 		`;
 		return (
 			<Header>

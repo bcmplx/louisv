@@ -19,6 +19,10 @@ const RealisationEach = props => {
 		@media only screen and (min-width: 577px) and (max-width: 767px){
 			width: 90%;
 		}
+		@media only screen and (max-width: 576px){
+			width: 90%;
+			padding: 0%;
+		}
 		
 	`;
 
@@ -54,9 +58,16 @@ const RealisationEach = props => {
 		@media only screen and (min-width: 577px) and (max-width: 767px){
 			p{
 			font-size: 2.2vw;
+			}
 		}
+		@media only screen and (max-width: 576px){
+			width: 100%;
+			padding: none;
+
+			p{
+				font-size: 3.2vw;
+			}
 		}
-		@media only screen and (max-width: 576px){}
 	`;
 	const [showModal, setShowModal] = useState(false);
 

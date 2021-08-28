@@ -40,7 +40,11 @@ class Introduction extends Component {
 				padding: 0vw 0;
 				font-size: 2.8vw;
 			}
-			@media only screen and (max-width: 576px){}
+			@media only screen and (max-width: 576px){
+				margin: 0;
+				padding: 0vw 0;
+				font-size: 3.8vw;
+			}
 
 		`;
 

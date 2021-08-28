@@ -5,7 +5,7 @@ class Contact extends Component {
 	render() {
 
 		const Contact = styled.div`
-			width: 50vw;
+			// width: 50vw;
 			margin-bottom: 5%;
 			margin-top: 2%;
 
@@ -13,9 +13,9 @@ class Contact extends Component {
 				display: flex;
 				justify-content: start;
 				margin: auto;
-				width: 20%;
+				width: 80%;
 				align-items: center;
-				height: 4vh
+				padding: 0 4vw;
 			}
 			
 			i::before {
@@ -37,7 +37,7 @@ class Contact extends Component {
 				height: 100%;
 			}
 			li a:hover {
-				color: red;
+				/* color: red; */
 			}
 			.social-icons a {
 				color: #fff;

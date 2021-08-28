@@ -25,6 +25,10 @@ class AllPage extends Component {
 		width: 100%;
 		height: auto;
 		opacity: 0.04;
+
+		@media only screen and (max-width: 576px){
+			height: 100%;
+		}
 		`;
 
 		return (

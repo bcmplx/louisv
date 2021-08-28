@@ -19,7 +19,11 @@ const Background = styled.div`
     justify-content: center;
     align-items: center; 
     overflow-y: hidden;
-    z-index: 5;
+	z-index: 5;
+	
+	@media only screen and (max-width: 576px){
+		z-index: 500;
+	}
 `;
 
 const ModalWrapper = styled.div`
@@ -44,16 +48,20 @@ const ModalWrapper = styled.div`
 	img {
 		margin: 0;
 	}
-	/* i {
-		content: "\f063";
-	} */
+	@media only screen and (max-width: 576px){
+		width: 99%;
+		height: 70vh;
+	}
 `;
 const ModalImg = styled.img`
     width: 100%;
     height: 100%;
     border-radius: 10px 0 0 10px;
 	background: #000;
-	
+
+	@media only screen and (max-width: 576px){
+		position: fixed;
+	}
 	
 `;
 
@@ -79,7 +87,26 @@ const ModalContent = styled.div`
         background: #141414;
         color: #fff;
         border: none;
-    }
+	}
+	@media only screen and (max-width: 576px){
+		padding: 6%;
+		color: #fefefe;
+		background: rgba(0,0, 0, 0.6);
+		display: block;
+		overflow-y: scroll;
+		
+		h3 {
+			font-size: 7.6vw;
+		}
+
+		a {
+			border: 1px solid #fefefe;
+			border-radius: 3px;
+			padding: 1%;
+			display: flex;
+    		justify-content: center;
+		}
+	}
 `;
 
 
@@ -121,7 +148,8 @@ export const Modal = ({showModal, setShowModal}) => {
 			duration: 2500
 		},
 		opacity: showModal ? 1 : 0,
-		transform: showModal ? 'translateY(0%)' : 'translateY(-100%)'
+		transform: showModal ? 'translateY(0%)' : 'translateY(-100%)',
+		// padding: showModal ? '1%' : 0
 	});
 
 	const closeModal = e => {
