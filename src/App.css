@@ -168,6 +168,11 @@ h3 {
 	-webkit-animation: bounce 2s infinite;
 	animation: bounce 2s infinite;
 }
+
+.mobiletop {
+	display: none !important;
+}
+
 .arrow2 {
 	text-align: left;
 	bottom: 0;
@@ -330,6 +335,11 @@ h3 {
 	.formationEach {
 		width: 90%;
 	}
+
+	.mobiletop {
+		display: flex !important;
+	}
+
 	h2 {
 		font-size: 4.4vw;
 	}

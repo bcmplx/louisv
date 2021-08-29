@@ -3,7 +3,6 @@ import Stacks from './Stacks';
 import styled from 'styled-components';
 import Introduction from './Introduction';
 
-
 class FirstPage extends Component {
 
 	render() {
@@ -96,9 +95,9 @@ class FirstPage extends Component {
 					<div className="arrow bounce">
 						<a className="fa fa-arrow-down fa-2x" href="#realisations"></a> {/* eslint-disable-line no-alert*/}
 					</div>  
-					<div className="arrow2 bounce2">
-						<a className="fa fa-arrow-up fa-2x" href="#top"></a> {/* eslint-disable-line no-alert*/}
-					</div> 
+					{/* <div className="arrow2 bounce2">
+						<a className="fa fa-arrow-up fa-2x" href="#top"></a> 
+					</div>  */}
 				</FirstPage>
 				
 				

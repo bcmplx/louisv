@@ -69,6 +69,8 @@ const ModalImg = styled.img`
 
 	@media only screen and (max-width: 576px){
 		position: fixed;
+		max-width: 100%;
+		height: auto;
 	}
 	
 `;
@@ -159,7 +161,12 @@ const CloseModalButton = styled(MdClose)`
     width: 32px;
     height: 32px;
     padding: 0;
-    z-index: 10;
+	z-index: 10;
+	
+	@media only screen and (max-width: 576px){
+		right: 25px;
+		color: #fefefe;
+	}
 `;
 
 
@@ -190,7 +197,7 @@ export const Modal = ({showModal, setShowModal}) => {
 		},
 		opacity: showModal ? 1 : 0,
 		transform: showModal ? 'translateY(0%)' : 'translateY(-100%)',
-		// padding: showModal ? '1%' : 0
+		overflow: showModal ? 'hidden' : 'initial'
 	});
 
 	const closeModal = e => {

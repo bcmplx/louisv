@@ -98,6 +98,9 @@ const Nav = () => {
 	return (
 		<Nav role="navigation">
 			<ul>
+				<div role="link" tabIndex="0" className="mobiletop">
+					<li><a href="#top">Accueil</a></li>
+				</div>
 				<div role="link" tabIndex="0">
 					<li><a href="#realisations">Réalisations</a></li>
 				</div>
