@@ -53,8 +53,16 @@ const RealisationEach = props => {
 		@media only screen and (min-width: 1200px) and (max-width: 1399px){
 
 		}
-		@media only screen and (min-width: 992px) and (max-width: 1199px){}
-		@media only screen and (min-width: 768px) and (max-width: 991px){}
+		@media only screen and (min-width: 992px) and (max-width: 1199px){
+			p{
+			font-size: 1.6vw;
+			}
+		}
+		@media only screen and (min-width: 768px) and (max-width: 991px){
+			p{
+			font-size: 2vw;
+			}
+		}
 		@media only screen and (min-width: 577px) and (max-width: 767px){
 			p{
 			font-size: 2.2vw;

@@ -35,7 +35,7 @@ class FirstPage extends Component {
 
 			@media only screen and (min-width: 1400px){
 				h1 {
-					
+					font-size: 2vw;
 				}
 			}
 			@media only screen and (min-width: 1200px) and (max-width: 1399px){
@@ -50,7 +50,9 @@ class FirstPage extends Component {
 				}
 			}
 			@media only screen and (min-width: 768px) and (max-width: 991px){
+				width: 65%;
 				h1 {
+					margin: 3rem 2rem;
 					font-size: 2.6vw;
 				}
 			}
@@ -64,17 +66,21 @@ class FirstPage extends Component {
 				}
 			}
 			@media only screen and (max-width: 576px){
+				z-index: 3;
 				width: 87%;
 				height: calc(100vh + 1px);
 				min-height: 550px;
 
 				h1 {
-					font-size: 3.7vw;
-					margin: 10rem 2rem 3rem 2rem;
+					font-size: 4.7vw;
+					margin: 7rem 2rem 4rem 2rem;
 
 				}
 				.arrow {
 					display: none;
+				}
+				.arrow2 {
+					display: block;
 				}
 			}
 			
@@ -90,6 +96,9 @@ class FirstPage extends Component {
 					<div className="arrow bounce">
 						<a className="fa fa-arrow-down fa-2x" href="#realisations"></a> {/* eslint-disable-line no-alert*/}
 					</div>  
+					<div className="arrow2 bounce2">
+						<a className="fa fa-arrow-up fa-2x" href="#top"></a> {/* eslint-disable-line no-alert*/}
+					</div> 
 				</FirstPage>
 				
 				

@@ -24,12 +24,34 @@ class Formation extends Component {
 				margin: 0 1%;
 				border-radius: 6px; 
 			}
+			@media only screen and (min-width: 768px) and (max-width: 991px){
+				width: 100%;
+			}
 
 			@media only screen and (min-width: 577px) and (max-width: 767px){
 				flex-direction: column;
 				img {
 					margin: auto;
 					margin-bottom: 1vw;
+				}
+			}
+			@media only screen and (max-width: 576px){
+				flex-direction: column;
+				img {
+					margin: auto;
+					margin-bottom: 1vw;
+				}
+				p {
+					margin-bottom: auto;
+					line-height: 1;
+				}
+				p strong {
+					
+					font-size: 3vw;
+					font-weight: 100;
+				}
+				ul {
+					margin: 1rem 0;
 				}
 			}
 		`;

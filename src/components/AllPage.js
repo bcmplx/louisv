@@ -6,9 +6,6 @@ import ThirdPage from './PageFormations/ThirdPage';
 import LastPage from './PageContact/LastPage';
 import styled from 'styled-components';
 
-
-import '../arrow.css';
-
 class AllPage extends Component {
 
 	render() {

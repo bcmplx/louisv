@@ -70,6 +70,7 @@ const Nav = () => {
 			}
 		}
 		@media only screen and (min-width: 768px) and (max-width: 991px){
+			margin: 0 1%;
 			ul {
 				font-size: 2.2vw;
 			}

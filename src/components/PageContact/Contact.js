@@ -5,7 +5,6 @@ class Contact extends Component {
 	render() {
 
 		const Contact = styled.div`
-			// width: 50vw;
 			margin-bottom: 5%;
 			margin-top: 2%;
 
@@ -45,26 +44,43 @@ class Contact extends Component {
 			}
 
 			.fa-linkedin {
-			/* padding: 25 !important; */
-			-webkit-transition: .5s;
-			transition: .5s;
-			background-color: #181818;
+				/* padding: 25 !important; */
+				-webkit-transition: .5s;
+				transition: .5s;
+				background-color: #181818;
 			}
 
 			.fa-linkedin:hover {
-			background-color: #0073a4;
+				background-color: #0073a4;
 			}
 
 			.fa-github {
-			/* padding: 25%; */
-			-webkit-transition: .5s;
-			transition: .5s;
-			background-color: #181818;
+				/* padding: 25%; */
+				-webkit-transition: .5s;
+				transition: .5s;
+				background-color: #181818;
 			}
 
 			.fa-github:hover {
-			background-color: #5a32a3;
-}
+				background-color: #5a32a3;
+			}
+
+			@media only screen and (min-width: 768px) and (max-width: 991px){
+				ul {
+					width: 60%;
+				}
+			}
+			@media only screen and (min-width: 577px) and (max-width: 767px){
+				ul {
+					width: 60%;
+				}
+			}
+			@media only screen and (max-width: 576px){
+				width: 90%;
+				ul {
+					width: 50%;
+				}
+			}
 		`;
 		return(
 			<Contact className="footer__video--titre">

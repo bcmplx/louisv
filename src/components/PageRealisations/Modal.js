@@ -45,9 +45,17 @@ const ModalWrapper = styled.div`
 		text-align: left;
 	}
 
+	a:hover {
+		color: black;
+	}
+
 	img {
 		margin: 0;
 	}
+	@media only screen and (min-width: 768px) and (max-width: 991px){
+		width: 740px;
+	}
+	@media only screen and (min-width: 577px) and (max-width: 767px){}
 	@media only screen and (max-width: 576px){
 		width: 99%;
 		height: 70vh;
@@ -88,6 +96,34 @@ const ModalContent = styled.div`
         color: #fff;
         border: none;
 	}
+
+	@media only screen and (min-width: 1400px){
+		
+	}
+	@media only screen and (min-width: 1200px) and (max-width: 1399px){
+		
+	}
+	@media only screen and (min-width: 992px) and (max-width: 1199px){}
+	@media only screen and (min-width: 768px) and (max-width: 991px){
+		display: block;
+		overflow-y: scroll;
+		padding: 3%;
+		margin: auto;
+		height: 100%;
+
+		p {
+			font-size: 1.5vw;
+		}
+
+		h3 {
+			font-size: 3.4vw;
+			margin: auto;
+			width: 85%;
+			margin-bottom: 4%;
+		}
+	}
+	@media only screen and (min-width: 577px) and (max-width: 767px){}
+
 	@media only screen and (max-width: 576px){
 		padding: 6%;
 		color: #fefefe;
@@ -104,7 +140,12 @@ const ModalContent = styled.div`
 			border-radius: 3px;
 			padding: 1%;
 			display: flex;
-    		justify-content: center;
+			justify-content: center;
+			margin: 5% 0;
+		}
+
+		a:hover {
+			background: #fefefe;
 		}
 	}
 `;

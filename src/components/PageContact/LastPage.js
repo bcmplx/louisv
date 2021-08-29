@@ -15,6 +15,22 @@ class LastPage extends Component {
 				width: 50vw;
 				margin: auto;
 			}
+
+			@media only screen and (min-width: 768px) and (max-width: 991px){
+				
+			}
+			@media only screen and (min-width: 577px) and (max-width: 767px){
+				.container {
+					width: 70vw;
+					margin: auto;
+				}
+			}
+			@media only screen and (max-width: 576px){
+				.container {
+					width: 100%;
+					margin: auto;
+				}
+			}
 		`;
 
 		return (

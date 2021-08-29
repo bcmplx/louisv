@@ -10,7 +10,7 @@ class SecondPage extends Component {
 			display: flex;
 			flex-direction: column;
 			z-index: 3;
-			margin: 1vw;
+			margin: auto;
 		`;
 
 		return (
