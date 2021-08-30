@@ -34,6 +34,23 @@ class Formation extends Component {
 					margin: auto;
 					margin-bottom: 1vw;
 				}
+				p {
+					margin-bottom: auto;
+					line-height: 1.2;
+				}
+				p strong {
+					
+					font-size: 2.2vw;
+					font-weight: 100;
+				}
+				ul {
+					margin: 1rem 0;
+					text-align: start;
+				
+				}
+				li {
+					list-style: inside;
+				}
 			}
 			@media only screen and (max-width: 576px){
 				flex-direction: column;
@@ -52,6 +69,10 @@ class Formation extends Component {
 				}
 				ul {
 					margin: 1rem 0;
+					text-align: start;
+				}
+				li {
+					list-style: inside;
 				}
 			}
 		`;
