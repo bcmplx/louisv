@@ -213,6 +213,31 @@ h3 {
 		background-position: 0% 50%;
 	}
 }
+.navbar {
+	position: fixed;
+	width: 100%;
+	z-index: 5;
+	background: transparent !important;
+}
+.navbar.active {
+	background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(21, 36, 54) 100%) !important;
+}
+.nav-link.active {
+	color:  rgba(255, 255, 255, 0.55) !important;
+} 
+
+.selected {
+	box-shadow: 0px -3px 0px #61DAFB inset;
+	color: #fefefe !important;	
+}
+
+
+.nav-link:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+.selected:hover {
+	background-color: revert !important;
+}
 
 /*                       */
 /* ********** BREAKPOINT WIDTH *********** 1400+*/
