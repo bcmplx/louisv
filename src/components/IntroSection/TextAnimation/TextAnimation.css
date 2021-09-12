@@ -1,0 +1,158 @@
+.type-animationOne {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 0%;
+  overflow: hidden;
+  padding-right: 0.05em;
+  position: relative;
+  white-space: nowrap;
+}
+
+.type-animationOne:after {
+  content: "";
+  background: #152436;
+  position: absolute;
+  right: 0;
+  top: -0.05em;
+  bottom: -0.05em;
+  width: 0.07em;
+  border-right: 2px solid transparent;
+}
+
+.type-animationOne.animating {
+  -webkit-animation: type 3500ms;
+          animation: type 3500ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+
+.type-animationOne.animating:after {
+  -webkit-animation: cursor 520ms infinite ease-in-out;
+          animation: cursor 520ms infinite ease-in-out;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes cursor {
+  0%,
+  100% {
+    border-color: #152436;
+  }
+  50% {
+    border-color: #666666;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes cursor {
+  0%,
+  100% {
+    border-color: #152436;
+  }
+  50% {
+    border-color: #666666;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes type {
+  7.14286% {
+    width: 1.41em;
+  }
+  14.28571% {
+    width: 2.82em;
+  }
+  21.42857% {
+    width: 4.23em;
+  }
+  28.57143% {
+    width: 5.64em;
+  }
+  35.71429% {
+    width: 7.05em;
+  }
+  42.85714% {
+    width: 8.46em;
+  }
+  50% {
+    width: 9.87em;
+  }
+  57.14286% {
+    width: 11.28em;
+  }
+  64.28571% {
+    width: 12.69em;
+  }
+  71.42857% {
+    width: 14.1em;
+  }
+  78.57143% {
+    width: 15.51em;
+  }
+  85.71429% {
+    width: 16.92em;
+  }
+  92.85714% {
+    width: 18.33em;
+  }
+  100% {
+    width: 18.33em;
+    padding-right: 0;
+  }
+}
+
+@keyframes type {
+  7.14286% {
+    width: 1.41em;
+  }
+  14.28571% {
+    width: 2.82em;
+  }
+  21.42857% {
+    width: 4.23em;
+  }
+  28.57143% {
+    width: 5.64em;
+  }
+  35.71429% {
+    width: 7.05em;
+  }
+  42.85714% {
+    width: 8.46em;
+  }
+  50% {
+    width: 9.87em;
+  }
+  57.14286% {
+    width: 11.28em;
+  }
+  64.28571% {
+    width: 12.69em;
+  }
+  71.42857% {
+    width: 14.1em;
+  }
+  78.57143% {
+    width: 15.51em;
+  }
+  85.71429% {
+    width: 16.92em;
+  }
+  92.85714% {
+    width: 18.33em;
+  }
+  100% {
+    width: 18.33em;
+    padding-right: 0;
+  }
+}
+/*# sourceMappingURL=TextAnimation.css.map */

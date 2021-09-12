@@ -1,15 +1,16 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-import AllPage from './components/AllPage';
+import Home from './pages';
+
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
 
-	return (
-    
-		<div className="App">
-			<AllPage />
-		</div>
+	return (    
+		<Router className="App">
+			<Home />
+		</Router>
 	);
 }
 
