@@ -1,0 +1,79 @@
+// "Type" width
+// - controls how much the word container expands when each letter is "typed"
+// - will need adjusted depending on word and typeface
+$chWidth: 1.41em;
+// Word length
+$chCountOne: 14; 
+// Typing animation length
+$typeDurationOne: 250ms * $chCountOne;
+
+$color: #fefefe;
+$bg: #152436;
+$cursor: scale-color($color, $lightness: -60%);
+
+.type-animationOne {
+	// Required for keeping expected alignment
+	display: inline-flex;
+	flex-wrap: nowrap;
+	// Start out by hiding via width and overflow
+	width: 0%;
+	overflow: hidden;
+	// Leave room for cursor!
+	padding-right: 0.05em;
+	position: relative;
+	// height: 10vh;
+	white-space: nowrap;
+
+	&:after {
+		content: "";
+		background: $bg;
+		position: absolute;
+		right: 0;
+		top: -0.05em;
+		bottom: -0.05em;
+		width: 0.07em;
+		border-right: 2px solid transparent;
+	}
+
+	&.animating {
+		animation: type $typeDurationOne;
+		// "stick" to last frame
+		animation-fill-mode: forwards;
+		animation-delay: 6s;
+
+		&:after {
+			$cursorLoopCount: ((($chCountOne + 1) * 170)/100) + 3;
+			animation: cursor 520ms infinite ease-in-out;
+			animation-delay: 1s;
+		}
+	}
+}
+
+@keyframes cursor {
+	0%,
+	100% {
+		border-color: $bg;
+	}
+	50% {
+		border-color: $cursor;
+	}
+	100% {
+		width: 0;
+	}
+}
+
+$frameSize: 100 / $chCountOne;
+@keyframes type {
+	@for $ch from 1 to $chCountOne {
+		$frame: $ch * $frameSize;
+		#{$frame}% {
+			width: $ch * $chWidth;
+		}
+	}
+	100% {
+		width: ($chCountOne  - 1) * $chWidth;
+		padding-right: 0;
+	}
+}
+
+
