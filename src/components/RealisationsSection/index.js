@@ -30,60 +30,123 @@ const Realisations = ({
 	alt,
 	primary,
 	dark, dark2,
-	min, max}) => {
+	min, max,
+	animation1,
+	animation2,
+	animation3
 
-	const [animBtn, setanimBtn] = useState(false);
+}) => {
+
+	const [animatedBtn, setanimBtn] = useState(false);
+	const [animatedh1, setanimatedh1] = useState(false);
+	const [animatedTopLine, setanimatedTopLine] = useState(false);
+	const [animatedDescription, setanimatedDescription] = useState(false);
 
 	const changeBtn = () => { 
 		if(window.scrollY > min && window.scrollY < max) {
 			setanimBtn(true);
+			setanimatedh1(true);
+			setanimatedTopLine(true);
+			setanimatedDescription(true);
 		} else {
 			setanimBtn(false);
+			setanimatedh1(false);
+			setanimatedDescription(false);
+			setanimatedTopLine(false);
 		}
 	};
 
 	useEffect(() => {
 		window.addEventListener('scroll', changeBtn);
+
 	}, []);
 
 	
 
-	const Btn = animBtn ? (
-		<BtnWrap>
-			<Animated animationIn="fadeInLeft" 
-				animationOut="fadeOutLeft" 
-				animationInDuration={1000} 
-				animationOutDuration={2000} 
-				isVisible={true}
-			>
-				<Button to={buttonTo}
-					smooth={true}
-					duration={700}
-					spy={true}
-					exact="true"
-					offset={-80}
-					primary={primary ? 1 : 0} 
-					dark={dark ? 1 : 0}
-					dark2={dark2 ? 1 : 0}
-				>{buttonLabel}</Button>
-			</Animated>
-		</BtnWrap>) 
-		: null;
+	const Btn = animatedBtn ? (		
+		<Animated animationIn={animation1} 
+			animationOut="fadeOutLeft" 
+			animationInDuration={1500} 
+			animationOutDuration={2000} 
+			isVisible={true}
+		>
+			<Button to={buttonTo}
+				smooth={true}
+				duration={700}
+				spy={true}
+				exact="true"
+				offset={-80}
+				primary={primary ? 1 : 0} 
+				dark={dark ? 1 : 0}
+				dark2={dark2 ? 1 : 0}
+			>{buttonLabel}</Button>
+		</Animated>
+	) : ' ';
+
+	const AnimTitle = animatedh1 ? (
+		<Animated animationIn={animation1} 
+			animationOut="fadeOutLeft" 
+			animationInDuration={1000} 
+			animationOutDuration={2000} 
+			isVisible={true}
+		>
+			{headLine}
+		</Animated>
+	) : ' ';
+	
+	const AnimTopLine = animatedTopLine ? (
+		<Animated animationIn={animation2} 
+			animationOut="fadeOutLeft" 
+			animationInDuration={1000} 
+			animationOutDuration={2000} 
+			isVisible={true}
+		>
+			{topLine}
+		</Animated>
+	) : ' ';
+
+	const AnimDescription = animatedDescription ? (
+		<Animated animationIn={animation3} 
+			animationOut="fadeOutLeft" 
+			animationInDuration={2000} 
+			animationOutDuration={2000} 
+			isVisible={true}
+		>
+			{description}
+		</Animated>
+	) : ' ';
+		
+	const AnimDescription2 = animatedDescription ? (
+		<Animated animationIn={animation3} 
+			animationOut="fadeOutLeft" 
+			animationInDuration={4000} 
+			animationOutDuration={2000} 
+			isVisible={true}
+		>
+			{description2}
+		</Animated>
+	) : ' ';
 		
 	return (
 		
 		<>
-			{console.log(window.scrollY)}
+			
 			<RealContainer lightBg={lightBg} id={id}>
 				<RealWrapper>
 					<RealRow imgStart={imgStart}>
 						<Column1>
 							<TextWrapper>
-								<TopLine>{topLine}</TopLine>
-								<Heading lightText={lightText}>{headLine}</Heading>
-								<Subtitle darkText={darkText}>{description}</Subtitle>
-								{description2 ? <Subtitle darkText={darkText}>{description2}</Subtitle> : null}
-								{Btn}
+								<TopLine>
+									{AnimTopLine}
+								</TopLine>
+								<Heading lightText={lightText}>
+									{AnimTitle}
+								</Heading>
+								<Subtitle darkText={darkText}>{AnimDescription}</Subtitle>
+								{description2 ? <Subtitle darkText={darkText}>{AnimDescription2}</Subtitle> : null}
+								<BtnWrap>
+									{Btn}
+								</BtnWrap>
 							</TextWrapper>
 						</Column1>
 						<Column2>

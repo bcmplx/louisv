@@ -23,8 +23,10 @@ export const homeObjOne = {
 	dark: false,
 	primary: true,
 	darkText: true,
-	min: 800,
-	max: 1840
+	animation1: 'fadeInLeft',
+	animation2: 'bounceInDown',
+	min: 300,
+	max: 1200
 };
 
 export const homeObjTwo = {
@@ -43,6 +45,8 @@ export const homeObjTwo = {
 	dark: false,
 	primary: true,
 	darkText: false,
+	animation1: 'fadeInLeft',
+	animation2: 'bounceInDown',
 	min: 2600,
 	max: 3400
 };
@@ -81,6 +85,8 @@ export const homeObjFour = {
 	dark: false,
 	primary: true,
 	darkText: false,
+	animation1: 'fadeInLeft',
+	animation2: 'bounceInDown',
 	min: 4500,
-	max: 5100
+	max: 5600
 };

@@ -114,7 +114,7 @@ const Navbar = ({toggle}) => {
 							<NavItem>
 								<NavLinks to="contact"
 									smooth={true}
-									duration={600}
+									duration={500}
 									spy={true}
 									exact='true'
 									offset={-80}
