@@ -13,6 +13,7 @@ import {RealContainer,
 	BtnWrap,
 	ImgWrap,
 	Img} from './RealisationsElements';
+import { useMediaQuery } from 'react-responsive';
 
 const Realisations = ({
 	lightBg, 
@@ -31,6 +32,7 @@ const Realisations = ({
 	primary,
 	dark, dark2,
 	min, max,
+	minMobile, maxMobile,
 	animation1,
 	animation2,
 	animation3
@@ -42,18 +44,43 @@ const Realisations = ({
 	const [animatedTopLine, setanimatedTopLine] = useState(false);
 	const [animatedDescription, setanimatedDescription] = useState(false);
 
+	const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
+
 	const changeBtn = () => { 
-		if(window.scrollY > min && window.scrollY < max) {
-			setanimBtn(true);
-			setanimatedh1(true);
-			setanimatedTopLine(true);
-			setanimatedDescription(true);
-		} else {
-			setanimBtn(false);
-			setanimatedh1(false);
-			setanimatedDescription(false);
-			setanimatedTopLine(false);
+		console.log(window.scrollY);
+		if (isMobile) {
+			if(window.scrollY > minMobile && window.scrollY < maxMobile) {
+				setanimBtn(true);
+				setanimatedh1(true);
+				setanimatedTopLine(true);
+				setanimatedDescription(true);
+			} else {
+				setanimBtn(false);
+				setanimatedh1(false);
+				setanimatedDescription(false);
+				setanimatedTopLine(false);
+			}
 		}
+		else {
+			if(window.scrollY > min && window.scrollY < max) {
+				setanimBtn(true);
+				setanimatedh1(true);
+				setanimatedTopLine(true);
+				setanimatedDescription(true);
+			} else {
+				setanimBtn(false);
+				setanimatedh1(false);
+				setanimatedDescription(false);
+				setanimatedTopLine(false);
+			}
+		}
+
+
+
+
+
+		
 	};
 
 	useEffect(() => {
@@ -67,7 +94,7 @@ const Realisations = ({
 		<Animated animationIn={animation1} 
 			animationOut="fadeOutLeft" 
 			animationInDuration={1500} 
-			animationOutDuration={2000} 
+			animationOutDuration={1000} 
 			isVisible={true}
 		>
 			<Button to={buttonTo}
@@ -81,56 +108,113 @@ const Realisations = ({
 				dark2={dark2 ? 1 : 0}
 			>{buttonLabel}</Button>
 		</Animated>
-	) : ' ';
+	) : (
+		<Animated animationIn={animation1} 
+			animationOut="fadeOutLeft" 
+			animationInDuration={1500} 
+			animationOutDuration={1000} 
+			isVisible={false}
+		>
+			<Button to={buttonTo}
+				smooth={true}
+				duration={700}
+				spy={true}
+				exact="true"
+				offset={-80}
+				primary={primary ? 1 : 0} 
+				dark={dark ? 1 : 0}
+				dark2={dark2 ? 1 : 0}
+			>{buttonLabel}</Button>
+		</Animated>
+	);
 
 	const AnimTitle = animatedh1 ? (
 		<Animated animationIn={animation1} 
 			animationOut="fadeOutLeft" 
 			animationInDuration={1000} 
-			animationOutDuration={2000} 
+			animationOutDuration={1000} 
 			isVisible={true}
 		>
 			{headLine}
 		</Animated>
-	) : ' ';
+	) : (
+		<Animated animationIn={animation1} 
+			animationOut="fadeOutLeft" 
+			animationInDuration={1000} 
+			animationOutDuration={1000} 
+			isVisible={false}
+		>
+			{headLine}
+		</Animated>
+	);
 	
 	const AnimTopLine = animatedTopLine ? (
 		<Animated animationIn={animation2} 
 			animationOut="fadeOutLeft" 
 			animationInDuration={1000} 
-			animationOutDuration={2000} 
+			animationOutDuration={1000} 
 			isVisible={true}
 		>
 			{topLine}
 		</Animated>
-	) : ' ';
+	) : (
+		<Animated animationIn={animation2} 
+			animationOut="fadeOutLeft" 
+			animationInDuration={1000} 
+			animationOutDuration={1000} 
+			isVisible={false}
+		>
+			{topLine}
+		</Animated>
+	);
 
 	const AnimDescription = animatedDescription ? (
+		
 		<Animated animationIn={animation3} 
 			animationOut="fadeOutLeft" 
 			animationInDuration={2000} 
-			animationOutDuration={2000} 
+			animationOutDuration={1000} 
 			isVisible={true}
 		>
+			
 			{description}
 		</Animated>
-	) : ' ';
+	) : (
+		<Animated animationIn={animation3} 
+			animationOut="fadeOutLeft" 
+			animationInDuration={2000} 
+			animationOutDuration={1000} 
+			isVisible={false}
+		>
+			
+			{description}
+		</Animated>
+	);
 		
 	const AnimDescription2 = animatedDescription ? (
 		<Animated animationIn={animation3} 
 			animationOut="fadeOutLeft" 
 			animationInDuration={4000} 
-			animationOutDuration={2000} 
+			animationOutDuration={1000} 
 			isVisible={true}
+		>
+			
+			{description2}
+		</Animated>
+	) : (
+		<Animated animationIn={animation3} 
+			animationOut="fadeOutLeft" 
+			animationInDuration={4000} 
+			animationOutDuration={1000} 
+			isVisible={false}
 		>
 			{description2}
 		</Animated>
-	) : ' ';
+	);
 		
 	return (
 		
-		<>
-			
+		<>			
 			<RealContainer lightBg={lightBg} id={id}>
 				<RealWrapper>
 					<RealRow imgStart={imgStart}>

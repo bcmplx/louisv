@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro';
-import { Link as LinkRouter } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll';
 
 
@@ -38,7 +37,7 @@ export const NavbarContainer = styled.div`
 	max-width: 1200px;
 `;
 
-export const NavLogo = styled(LinkRouter)`
+export const NavLogo = styled(LinkScroll)`
 	color: #fefefe;
 	justify-self: flex-start;
 	cursor: pointer;
@@ -48,7 +47,7 @@ export const NavLogo = styled(LinkRouter)`
 	margin-left: 24px;
 	font-weight: bold; 
 	text-decoration: none;
-	visibility: ${({displayLogo}) => (displayLogo ? 'visible' : 'hidden')};
+	visibility: ${({displaylogo}) => (displaylogo ? 'visible' : 'hidden')};
 	transition: all 0.9s ease-out;
 
 
