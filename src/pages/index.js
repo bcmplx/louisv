@@ -27,7 +27,6 @@ const Home = () => {
 			<CompetencesSection />
 			<RealisationsSection {...homeObjTwo} />
 			<FormationsSection />
-			{/* <RealisationsSection {...homeObjThree} /> */}
 			<RealisationsSection {...homeObjFour} />
 			<Footer />
 		</>

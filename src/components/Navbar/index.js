@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {IconContext} from 'react-icons/lib';
+
 import {FaBars} from 'react-icons/fa';
 
 import {Nav, 
@@ -9,6 +10,7 @@ import {Nav,
 	NavMenu, 
 	NavItem, 
 	NavLinks} from './NavElements';
+import { scrollSpy } from 'react-scroll';
 
 const Navbar = ({toggle}) => {
 
@@ -24,6 +26,7 @@ const Navbar = ({toggle}) => {
 	};
 
 	const changeBg = () => { 
+		scrollSpy.update('refresh');
 		if(window.scrollY >= 200) {
 			setnavbarBg(true);
 		} else {
@@ -61,7 +64,7 @@ const Navbar = ({toggle}) => {
 			<IconContext.Provider value={{color: '#fefefe'}}>
 				<Nav navbarBg={navbarBg} >
 					<NavbarContainer>
-						<NavLogo to="/" displayLogo={displayLogo}>Louis Villain</NavLogo>
+						<NavLogo to="home" displaylogo={displayLogo}>Louis Villain</NavLogo>
 
 						<MobileIcon onClick={toggle}>
 							<FaBars />
@@ -112,7 +115,7 @@ const Navbar = ({toggle}) => {
 								>Formations</NavLinks>
 							</NavItem>
 							<NavItem>
-								<NavLinks to="contact"
+								<NavLinks to="contactpage"
 									smooth={true}
 									duration={500}
 									spy={true}

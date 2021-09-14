@@ -26,7 +26,9 @@ export const homeObjOne = {
 	animation1: 'fadeInLeft',
 	animation2: 'bounceInDown',
 	min: 300,
-	max: 1200
+	max: 1200,
+	minMobile: 400,
+	maxMobile: 1700
 };
 
 export const homeObjTwo = {
@@ -48,7 +50,9 @@ export const homeObjTwo = {
 	animation1: 'fadeInLeft',
 	animation2: 'bounceInDown',
 	min: 2600,
-	max: 3400
+	max: 3400,
+	minMobile: 2900,
+	maxMobile: 4300
 };
 
 export const homeObjThree = {
@@ -70,7 +74,7 @@ export const homeObjThree = {
 };
 
 export const homeObjFour = {
-	id:'contact',
+	id:'contactpage',
 	lightBg: false,
 	lightText: true,
 	lightTextDesc: true,
@@ -88,5 +92,7 @@ export const homeObjFour = {
 	animation1: 'fadeInLeft',
 	animation2: 'bounceInDown',
 	min: 4500,
-	max: 5600
+	max: 5600,
+	minMobile: 5750,
+	maxMobile: 7000
 };

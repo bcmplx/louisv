@@ -5,11 +5,12 @@ export const FormationsContainer = styled.div`
 	color: #fefefe;
 	background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#152436')};
 	height: 1100px;
+	overflow: hidden;
 
 
 	@media screen and (max-width: 768px) {
 		padding: 100px 0;
-		height: 1600px;
+		height: 1700px;
 	}
 	
 	@media screen and (max-width: 468px) {
@@ -119,7 +120,7 @@ export const HeaderImg = styled.img`
 	border-radius: 10px;
 `;
 
-export const TopLine = styled.p`
+export const TopLine = styled.div`
 	color: #01bf71;
 	font-size: 16px;
 	line-height: 16px;

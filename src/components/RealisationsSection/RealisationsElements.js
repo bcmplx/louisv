@@ -5,6 +5,7 @@ export const RealContainer = styled.div`
 	color: #fefefe;
 	background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#152436')};
 	height: 1000px;
+	overflow: hidden;
 
 
 	@media screen and (max-width: 768px) {
@@ -61,7 +62,7 @@ export const TextWrapper = styled.div`
 	padding-bottom: 60px;
 `;
 
-export const TopLine = styled.p`
+export const TopLine = styled.div`
 	color: #01bf71;
 	font-size: 16px;
 	line-height: 16px;
@@ -83,7 +84,7 @@ export const Heading = styled.h1`
 	}
 `;
 
-export const Subtitle = styled.p`
+export const Subtitle = styled.div`
 	max-width: 440px;
 	margin-bottom: 35px;
 	font-size: 18px;
