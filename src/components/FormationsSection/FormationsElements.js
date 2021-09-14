@@ -15,7 +15,7 @@ export const FormationsContainer = styled.div`
 	
 	@media screen and (max-width: 468px) {
 		padding: 70px 0;
-		height: 1200px;
+		height: 1500px;
 	}
 `;
 

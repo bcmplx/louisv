@@ -11,20 +11,30 @@ import Icon1 from '../../images/coding_3.svg';
 import Icon2 from '../../images/coding_4.svg';
 import Icon3 from '../../images/coding_5.svg';
 import Icon4 from '../../images/coding_10.svg';
+import { useMediaQuery } from 'react-responsive';
 
 const Competences = () => {
 
 	const [animated, setanimated] = useState(false);
+	const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
 	const animations = () => { 
-		if(window.scrollY > 1400 && window.scrollY < 2500) {
-			setanimated(true);
-		} else {
-			setanimated(false);
+		if (isMobile) {
+			if(window.scrollY > 1400 && window.scrollY < 2850) {
+				setanimated(true);
+			} else {
+				setanimated(false);
+			}
 		}
-	};
+		else {
+			if(window.scrollY > 1400 && window.scrollY < 2500) {
+				setanimated(true);
+			} else {
+				setanimated(false);
+			}
+		}
 
-	
+	};	
 
 	useEffect(() => {
 		window.addEventListener('scroll', animations);
