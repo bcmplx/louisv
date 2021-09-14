@@ -32,10 +32,7 @@ const Formations = () => {
 	const [animated, setanimated] = useState(false);
 	const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
-	console.log('isTabletOrMobile ? : ', isMobile);
-
 	const animations = () => { 
-		// console.log(window.scrollY);
 		if (isMobile) {
 			if(window.scrollY > 4000 && window.scrollY < 6100) {
 				setanimated(true);
