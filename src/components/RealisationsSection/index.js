@@ -40,7 +40,7 @@ const Realisations = ({
 }) => {
 
 	const [animatedBtn, setanimBtn] = useState(false);
-	const [animatedh1, setanimatedh1] = useState(false);
+	const [animated, setanimated] = useState(false);
 	const [animatedTopLine, setanimatedTopLine] = useState(false);
 	const [animatedDescription, setanimatedDescription] = useState(false);
 
@@ -52,12 +52,12 @@ const Realisations = ({
 		if (isMobile) {
 			if(window.scrollY > minMobile && window.scrollY < maxMobile) {
 				setanimBtn(true);
-				setanimatedh1(true);
+				setanimated(true);
 				setanimatedTopLine(true);
 				setanimatedDescription(true);
 			} else {
 				setanimBtn(false);
-				setanimatedh1(false);
+				setanimated(false);
 				setanimatedDescription(false);
 				setanimatedTopLine(false);
 			}
@@ -65,31 +65,33 @@ const Realisations = ({
 		else {
 			if(window.scrollY > min && window.scrollY < max) {
 				setanimBtn(true);
-				setanimatedh1(true);
+				setanimated(true);
 				setanimatedTopLine(true);
 				setanimatedDescription(true);
 			} else {
 				setanimBtn(false);
-				setanimatedh1(false);
+				setanimated(false);
 				setanimatedDescription(false);
 				setanimatedTopLine(false);
 			}
-		}
+		}	
+	};
 
-
-
-
-
+	const animatedCss = (data, duraIn=1000, animIn = 'fadeIn', animOut='fadeOutLeft', duraOut=1000) => {
+		return (
+			<Animated animationIn={animIn} 
+				animationOut={animOut} 
+				animationInDuration={duraIn} 
+				animationOutDuration={duraOut} 
+				isVisible={animated}
+			>
+				{data}
+			</Animated>
+		);
 		
 	};
 
-	useEffect(() => {
-		window.addEventListener('scroll', changeBtn);
-
-	}, []);
-
 	
-
 	const Btn = animatedBtn ? (		
 		<Animated animationIn={animation1} 
 			animationOut="fadeOutLeft" 
@@ -128,25 +130,7 @@ const Realisations = ({
 		</Animated>
 	);
 
-	const AnimTitle = animatedh1 ? (
-		<Animated animationIn={animation1} 
-			animationOut="fadeOutLeft" 
-			animationInDuration={1000} 
-			animationOutDuration={1000} 
-			isVisible={true}
-		>
-			{headLine}
-		</Animated>
-	) : (
-		<Animated animationIn={animation1} 
-			animationOut="fadeOutLeft" 
-			animationInDuration={1000} 
-			animationOutDuration={1000} 
-			isVisible={false}
-		>
-			{headLine}
-		</Animated>
-	);
+	const AnimTitle = animatedCss(headLine, 1000, animation1, 'fadeOutLeft');
 	
 	const AnimTopLine = animatedTopLine ? (
 		<Animated animationIn={animation2} 
@@ -211,6 +195,10 @@ const Realisations = ({
 			{description2}
 		</Animated>
 	);
+
+	useEffect(() => {
+		window.addEventListener('scroll', changeBtn);
+	}, []);
 		
 	return (
 		
