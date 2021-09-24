@@ -81,7 +81,7 @@ export const homeObjFour = {
 	topLine: 'Me contacter',
 	headLine: 'Louis Villain',
 	description: `Une idée ? Un projet ? Une question ? N'hésitez pas à me demander un devis (gratuit) ! `,
-	buttonLabel: 'contact',
+	buttonLabel: 'Contact',
 	buttonTo: 'home',
 	imgStart: false,
 	img: require('../../images/coding_11.svg').default,

@@ -41,38 +41,28 @@ const Realisations = ({
 
 	const [animatedBtn, setanimBtn] = useState(false);
 	const [animated, setanimated] = useState(false);
-	const [animatedTopLine, setanimatedTopLine] = useState(false);
-	const [animatedDescription, setanimatedDescription] = useState(false);
 
 	const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
 
-	const changeBtn = () => { 
+	const changeDisplay = () => { 
 		console.log(window.scrollY);
 		if (isMobile) {
 			if(window.scrollY > minMobile && window.scrollY < maxMobile) {
 				setanimBtn(true);
 				setanimated(true);
-				setanimatedTopLine(true);
-				setanimatedDescription(true);
 			} else {
 				setanimBtn(false);
 				setanimated(false);
-				setanimatedDescription(false);
-				setanimatedTopLine(false);
 			}
 		}
 		else {
 			if(window.scrollY > min && window.scrollY < max) {
 				setanimBtn(true);
 				setanimated(true);
-				setanimatedTopLine(true);
-				setanimatedDescription(true);
 			} else {
 				setanimBtn(false);
 				setanimated(false);
-				setanimatedDescription(false);
-				setanimatedTopLine(false);
 			}
 		}	
 	};
@@ -90,6 +80,10 @@ const Realisations = ({
 		);
 		
 	};
+
+	function switchText () {
+		console.log('coming soon');
+	}
 
 	
 	const Btn = animatedBtn ? (		
@@ -131,73 +125,13 @@ const Realisations = ({
 	);
 
 	const AnimTitle = animatedCss(headLine, 1000, animation1, 'fadeOutLeft');
-	
-	const AnimTopLine = animatedTopLine ? (
-		<Animated animationIn={animation2} 
-			animationOut="fadeOutLeft" 
-			animationInDuration={1000} 
-			animationOutDuration={1000} 
-			isVisible={true}
-		>
-			{topLine}
-		</Animated>
-	) : (
-		<Animated animationIn={animation2} 
-			animationOut="fadeOutLeft" 
-			animationInDuration={1000} 
-			animationOutDuration={1000} 
-			isVisible={false}
-		>
-			{topLine}
-		</Animated>
-	);
+	const AnimTopLine = animatedCss(topLine, 1000, animation2, 'fadeOutLeft');
+	const AnimDescription = animatedCss(description, 2000, animation3, 'fadeOutLeft');
+	const AnimDescription2 = animatedCss(description2, 4000, animation3, 'fadeOutLeft');
 
-	const AnimDescription = animatedDescription ? (
-		
-		<Animated animationIn={animation3} 
-			animationOut="fadeOutLeft" 
-			animationInDuration={2000} 
-			animationOutDuration={1000} 
-			isVisible={true}
-		>
-			
-			{description}
-		</Animated>
-	) : (
-		<Animated animationIn={animation3} 
-			animationOut="fadeOutLeft" 
-			animationInDuration={2000} 
-			animationOutDuration={1000} 
-			isVisible={false}
-		>
-			
-			{description}
-		</Animated>
-	);
-		
-	const AnimDescription2 = animatedDescription ? (
-		<Animated animationIn={animation3} 
-			animationOut="fadeOutLeft" 
-			animationInDuration={4000} 
-			animationOutDuration={1000} 
-			isVisible={true}
-		>
-			
-			{description2}
-		</Animated>
-	) : (
-		<Animated animationIn={animation3} 
-			animationOut="fadeOutLeft" 
-			animationInDuration={4000} 
-			animationOutDuration={1000} 
-			isVisible={false}
-		>
-			{description2}
-		</Animated>
-	);
 
 	useEffect(() => {
-		window.addEventListener('scroll', changeBtn);
+		window.addEventListener('scroll', changeDisplay);
 	}, []);
 		
 	return (
@@ -216,7 +150,7 @@ const Realisations = ({
 								</Heading>
 								<Subtitle darkText={darkText}>{AnimDescription}</Subtitle>
 								{description2 ? <Subtitle darkText={darkText}>{AnimDescription2}</Subtitle> : null}
-								<BtnWrap>
+								<BtnWrap onClick={switchText}>
 									{Btn}
 								</BtnWrap>
 							</TextWrapper>
