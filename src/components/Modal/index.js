@@ -3,6 +3,8 @@ import { useSpring, animated } from 'react-spring';
 import {Background} from './ModalElements';
 import ModalData from './ModalData';
 import ModalWIP from './ModalWIP';
+import {Animated} from 'react-animated-css';
+
 
 const Modal = ({showModal, setShowModal, WIP}) => {
 
@@ -24,9 +26,9 @@ const Modal = ({showModal, setShowModal, WIP}) => {
 		config: {
 			duration: 200
 		},
-		opacity: showModal ? 1 : 0,
-		transform: showModal ? 'translateY(0%)' : 'translateY(-100%)',
-		overflow: showModal ? 'hidden' : 'initial'
+		opacity: 1,
+		transform: 'translateY(0%)',
+		overflow: 'hidden'
 	});
 
 	const closeModal = e => {
@@ -79,9 +81,17 @@ const Modal = ({showModal, setShowModal, WIP}) => {
 			<> 
 				{showModal ? (
 					<Background ref={modalRef} onClick={closeModal}> 
-						<animated.div style={animation}>
-							<ModalWIP setShowModal={setShowModal}/>
-						</animated.div>
+						<Animated animationIn='fadeInRight'
+							animationOut="fadeOutLeft" 
+							animationInDuration={500} 
+							animationOutDuration={1000} 
+							isVisible={true}
+						>
+							<animated.div style={animation}>
+								<ModalWIP setShowModal={setShowModal}/>
+							</animated.div>
+						</Animated>
+						
 					</Background>
 				) 
 					: null 
