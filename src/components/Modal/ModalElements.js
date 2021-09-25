@@ -67,7 +67,6 @@ export const ModalWrapper = styled.div`
 	}
 `;
 export const ModalImg = styled.img`
-    /* width: 100%; */
     height: 100%;
     border-radius: 10px 0 0 10px;
 
@@ -107,7 +106,7 @@ export const ModalContent = styled.div`
 
 @media only screen and (max-width: 768px){
 		padding: 6%;
-		color: #152436;
+		color: #fefefe;
 		display: block;
 		
 		h3 {
@@ -141,11 +140,17 @@ export const CloseModalButton = styled(MdClose)`
 	z-index: 10;
 	
 	@media only screen and (max-width: 768px){
-		right: 25px;
-		color: #152436;
+		right: 40px;
+		top: 40px;
+		color: #fefefe;
 	}
 `;
 
 export const WIPContent = styled.div`
-
+	@media only screen and (max-width: 768px){
+		background: rgba(21,36,54,0.6);
+		padding: 4%;
+		border-radius: 6px;
+	}
+	
 `;
