@@ -44,7 +44,7 @@ export const ModalWrapper = styled.div`
 		margin: 0;
 	}
 
-	@media only screen and (max-width: 1224px){
+	@media only screen and (max-width: 1200px){
 		width: 100%;
 	}
 	@media only screen and (max-width: 1024px){

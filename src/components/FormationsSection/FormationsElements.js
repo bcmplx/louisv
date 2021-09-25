@@ -57,7 +57,7 @@ export const FormationsRow = styled.div`
 	align-items: center;
 	grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)}; 
 
-	@media screen and (max-width: 1000px) {
+	@media screen and (max-width: 1024px) {
 		border: 1px solid #151515;
 		border-radius: 7px;
 		margin-bottom: 14px;
@@ -137,11 +137,11 @@ export const Heading = styled.h1`
 	font-weight: 600;
 	color: ${({lightText}) => (lightText ? '#f7f8fa' : '#152436')};
 
-	@media screen and (max-width: 1000px) {
+	@media screen and (max-width: 1024px) {
 		font-size: 24px;
 	}
 
-	@media screen and (max-width: 850px) {
+	@media screen and (max-width: 768px) {
 		font-size: 20px;
 	}
 `;
