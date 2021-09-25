@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './TextAnimation/TextAnimation.css';
 import {IntroContainer, IntroBg, VideoBg, IntroContent, IntroH1, IntroP, IntroBtnWrapper, ArrowForward, ArrowRight} from './IntroElements';
 import Video from '../../videos/intro.mp4';
-import {Button} from '../ButtonElement';
+import {Button} from '../Services/ButtonElement';
 import {Animated} from 'react-animated-css';
 
 
@@ -48,6 +48,7 @@ const IntroSection = () => {
 					onMouseLeave={onHover}
 					smooth={true}
 					duration={800}
+					offset={-80}
 				>
 					Présentation {hover ? <ArrowForward /> : <ArrowRight/>}
 				</Button>

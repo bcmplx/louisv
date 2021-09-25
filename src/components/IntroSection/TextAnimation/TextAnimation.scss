@@ -5,7 +5,7 @@ $chWidth: 1.41em;
 // Word length
 $chCountOne: 14; 
 // Typing animation length
-$typeDurationOne: 250ms * $chCountOne;
+$typeDurationOne: 210ms * $chCountOne;
 
 $color: #fefefe;
 $bg: #152436;
@@ -39,7 +39,7 @@ $cursor: scale-color($color, $lightness: -60%);
 		animation: type $typeDurationOne;
 		// "stick" to last frame
 		animation-fill-mode: forwards;
-		animation-delay: 6s;
+		animation-delay: 2s;
 
 		&:after {
 			$cursorLoopCount: ((($chCountOne + 1) * 170)/100) + 3;

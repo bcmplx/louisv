@@ -1,5 +1,5 @@
 import { Link, Link as LinkScroll } from 'react-scroll';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 
 export const FooterContainer = styled.footer`

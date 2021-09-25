@@ -1,10 +1,13 @@
 import React, {useState} from 'react';
+
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
+
+import TemplateSections from '../components/TemplateSections';
+import { profil, realisationsDIP, contact } from '../components/SectionsData/Data';
+
 import IntroSection  from '../components/IntroSection';
-import RealisationsSection from '../components/RealisationsSection';
 import FormationsSection from '../components/FormationsSection';
-import { homeObjOne, homeObjTwo, homeObjFour } from '../components/RealisationsSection/Data';
 import CompetencesSection from '../components/CompetencesSection';
 import Footer from '../components/Footer';
 
@@ -23,11 +26,11 @@ const Home = () => {
 			<Navbar toggle={toggle}/>
 			<IntroSection />
 			
-			<RealisationsSection {...homeObjOne} />
+			<TemplateSections {...profil} />
 			<CompetencesSection />
-			<RealisationsSection {...homeObjTwo} />
+			<TemplateSections {...realisationsDIP} />
 			<FormationsSection />
-			<RealisationsSection {...homeObjFour} />
+			<TemplateSections {...contact} />
 			<Footer />
 		</>
 	);

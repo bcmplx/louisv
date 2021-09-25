@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md';
 
@@ -73,6 +73,9 @@ export const IntroH1 = styled.h1`
 	}
 	@media screen and (max-width: 480px) {
 		font-size: 32px;
+	}
+	@media screen and (max-width: 375px) {
+		font-size: 28px;
 	}
 `;
 
