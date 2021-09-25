@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const CompetencesContainer = styled.div`
 	height: 900px;

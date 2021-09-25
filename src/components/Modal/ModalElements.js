@@ -1,5 +1,5 @@
 
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import {MdClose} from 'react-icons/md';
 
 
@@ -16,21 +16,16 @@ export const Background = styled.div`
     overflow-y: hidden;
 	z-index: 5;
 	
-	@media only screen and (max-width: 576px){
-		z-index: 500;
-	}
 `;
 
 export const ModalWrapper = styled.div`
     width: 800px;
-    height: 500px;
+    height: 300px;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
     background: #fff;
     color: #000;
     display: flex;
     grid-template-columns: 1fr 1fr;
-    /* position: fixed; */
-    /* top: 10%; */
     z-index: 5;
     border-radius: 10px;
 	overflow-y: hidden;
@@ -48,25 +43,38 @@ export const ModalWrapper = styled.div`
 		width: 100%;
 		margin: 0;
 	}
-	@media only screen and (min-width: 768px) and (max-width: 991px){
-		width: 740px;
+
+	@media only screen and (max-width: 1224px){
+		width: 100%;
 	}
-	@media only screen and (min-width: 577px) and (max-width: 767px){}
-	@media only screen and (max-width: 576px){
-		width: 99%;
-		height: 70vh;
+	@media only screen and (max-width: 1024px){
+		width: 100%;
+	}
+	@media only screen and (max-width: 768px){
+		max-width: 100%;
+		width: 475px;
+		margin: auto;
+	}
+	@media only screen and (max-width: 480px){
+		max-width: 100%;
+		width: 370px;
+		margin: auto;
+	}
+	@media only screen and (max-width: 375px){
+		max-width: 100%;
+		width: 300px;
+		margin: auto;
 	}
 `;
 export const ModalImg = styled.img`
     /* width: 100%; */
     height: 100%;
     border-radius: 10px 0 0 10px;
-	background: #000;
 
-	@media only screen and (max-width: 576px){
+	@media only screen and (max-width: 768px){
 		position: fixed;
 		max-width: 100%;
-		height: auto;
+		height: 100%;
 	}
 	
 `;
@@ -95,39 +103,12 @@ export const ModalContent = styled.div`
         border: none;
 	}
 
-	@media only screen and (min-width: 1400px){
-		
-	}
-	@media only screen and (min-width: 1200px) and (max-width: 1399px){
-		
-	}
-	@media only screen and (min-width: 992px) and (max-width: 1199px){}
-	@media only screen and (min-width: 768px) and (max-width: 991px){
-		display: block;
-		overflow-y: scroll;
-		padding: 3%;
-		margin: auto;
-		height: 100%;
+	
 
-		p {
-			font-size: 1.5vw;
-		}
-
-		h3 {
-			font-size: 3.4vw;
-			margin: auto;
-			width: 85%;
-			margin-bottom: 4%;
-		}
-	}
-	@media only screen and (min-width: 577px) and (max-width: 767px){}
-
-	@media only screen and (max-width: 576px){
+@media only screen and (max-width: 768px){
 		padding: 6%;
-		color: #fefefe;
-		background: rgba(0,0, 0, 0.6);
+		color: #152436;
 		display: block;
-		overflow-y: scroll;
 		
 		h3 {
 			font-size: 7.6vw;
@@ -159,9 +140,9 @@ export const CloseModalButton = styled(MdClose)`
     padding: 0;
 	z-index: 10;
 	
-	@media only screen and (max-width: 576px){
+	@media only screen and (max-width: 768px){
 		right: 25px;
-		color: #fefefe;
+		color: #152436;
 	}
 `;
 

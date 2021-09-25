@@ -4,14 +4,9 @@ import error from '../../images/coding_error.svg';
 
 const ModalData = ({setShowModal}) => {
 
-	const style = {
-		width: '700px',
-		height: '300px'
-	};
-
 	return (
-		<ModalWrapper style={style}>
-			<ModalImg src={error} alt='error' style={{background: '#152436', width: '50%'}}/>
+		<ModalWrapper >
+			<ModalImg src={error} alt='error'/>
 			<ModalContent>
 				<WIPContent>
 					<h2>Work in Progress</h2>

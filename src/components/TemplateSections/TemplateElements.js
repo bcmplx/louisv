@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 /* eslint-disable */
 
 export const RealContainer = styled.div`
