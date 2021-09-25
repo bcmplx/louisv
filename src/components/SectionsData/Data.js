@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-export const homeObjOne = {
+export const profil = {
 	id:'profil',
 	lightBg: true,
 	lightText: false,
@@ -33,7 +33,7 @@ export const homeObjOne = {
 	maxMobile: 1700
 };
 
-export const homeObjTwo = {
+export const realisationsDIP = {
 	id:'realisations',
 	lightBg: false,
 	lightText: true,
@@ -43,7 +43,7 @@ export const homeObjTwo = {
 	description: `La formation se termine par ce que l'école appelle l'apothéose, à savoir un mois entièrement consacré à la réalisation d'un projet mobilisant toutes nos compétences. `,
 	buttonLabel: 'En savoir plus',
 	buttonModal: true,
-	WIP: false,
+	WIP: true,
 	buttonTo: 'realisations',
 	imgStart: true,
 	img: require('../../images/eiffel.svg').default,
@@ -59,7 +59,7 @@ export const homeObjTwo = {
 	maxMobile: 4300
 };
 
-export const homeObjFour = {
+export const contact = {
 	id:'contactpage',
 	lightBg: false,
 	lightText: true,

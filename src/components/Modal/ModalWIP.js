@@ -11,9 +11,7 @@ const ModalData = ({setShowModal}) => {
 
 	return (
 		<ModalWrapper style={style}>
-			<a href="https://days-in-paris.netlify.app/" target="_blank" rel="noreferrer">
-				<ModalImg src={error} alt='error' style={{background: '#152436'}}/>
-			</a>
+			<ModalImg src={error} alt='error' style={{background: '#152436', width: '50%'}}/>
 			<ModalContent>
 				<WIPContent>
 					<h2>Work in Progress</h2>

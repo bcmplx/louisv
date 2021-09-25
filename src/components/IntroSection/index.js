@@ -48,6 +48,7 @@ const IntroSection = () => {
 					onMouseLeave={onHover}
 					smooth={true}
 					duration={800}
+					offset={-80}
 				>
 					Présentation {hover ? <ArrowForward /> : <ArrowRight/>}
 				</Button>

@@ -12,7 +12,7 @@ import {RealContainer,
 	Subtitle, 
 	BtnWrap,
 	ImgWrap,
-	Img} from './RealisationsElements';
+	Img} from './TemplateElements';
 import { useMediaQuery } from 'react-responsive';
 import Modal from '../Modal';
 

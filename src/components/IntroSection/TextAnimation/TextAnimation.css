@@ -23,12 +23,12 @@
 }
 
 .type-animationOne.animating {
-  -webkit-animation: type 3500ms;
-          animation: type 3500ms;
+  -webkit-animation: type 2940ms;
+          animation: type 2940ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .type-animationOne.animating:after {
