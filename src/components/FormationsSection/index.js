@@ -89,7 +89,7 @@ const Formations = () => {
 				
 				<FormationsWrapper>
 					<FormationsH1>{formationsH1}</FormationsH1>
-					<FormationsRow imgStart={false}>
+					<FormationsRow imgStart={false} id="oclock">
 						<Column1>
 							<TextWrapper>
 								<HeaderWrap>
@@ -150,7 +150,7 @@ const Formations = () => {
 					</FormationsRow>
 
 
-					<FormationsRow imgStart={true}>
+					<FormationsRow imgStart={true} id="openclassrooms">
 						<Column1>
 							
 							<TextWrapper>

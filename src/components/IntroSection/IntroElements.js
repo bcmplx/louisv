@@ -23,11 +23,11 @@ export const IntroContainer = styled.div`
 		z-index:2;
 	}
 
-	@media screen and (max-width: 754px) {
+	@media screen and (max-width: 768px) {
 		height: 850px;
 	}
 
-	@media screen and (max-width: 554px) {
+	@media screen and (max-width: 480px) {
 		height: 750px;
 	}
 `;
