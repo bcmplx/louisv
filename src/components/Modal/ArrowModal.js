@@ -1,6 +1,7 @@
 import React, { Fragment} from 'react';
 
 const ArrowModal = ({setTextContent, textContent}) => {
+
 	return(
 		<>
 			{textContent == 'intro' ? (

@@ -14,6 +14,7 @@ import {RealContainer,
 	ImgWrap,
 	Img} from './RealisationsElements';
 import { useMediaQuery } from 'react-responsive';
+import Modal from '../Modal';
 
 const Realisations = ({
 	lightBg, 
@@ -26,6 +27,8 @@ const Realisations = ({
 	description, 
 	description2,
 	buttonLabel, 
+	buttonModal,
+	WIP,
 	buttonTo,
 	img, 
 	alt,
@@ -46,7 +49,6 @@ const Realisations = ({
 
 
 	const changeDisplay = () => { 
-		console.log(window.scrollY);
 		if (isMobile) {
 			if(window.scrollY > minMobile && window.scrollY < maxMobile) {
 				setanimBtn(true);
@@ -81,10 +83,17 @@ const Realisations = ({
 		
 	};
 
-	function switchText () {
-		console.log('coming soon');
-	}
+	const [showModal, setShowModal] = useState(false);
 
+	const openModal = () => {
+
+		setShowModal(prev => {
+			return !prev;
+		});
+	};
+
+	const BtnModalSmooth = buttonModal ? 'false' : 'true';
+	const BtnModalDur = buttonModal ? 100 : 700;
 	
 	const Btn = animatedBtn ? (		
 		<Animated animationIn={animation1} 
@@ -94,14 +103,15 @@ const Realisations = ({
 			isVisible={true}
 		>
 			<Button to={buttonTo}
-				smooth={true}
-				duration={700}
+				smooth={BtnModalSmooth}
+				duration={BtnModalDur}
 				spy={true}
 				exact="true"
 				offset={-80}
 				primary={primary ? 1 : 0} 
 				dark={dark ? 1 : 0}
-				dark2={dark2 ? 1 : 0}
+				dark2={dark2 ? 1 : 0} 
+				onClick={openModal}
 			>{buttonLabel}</Button>
 		</Animated>
 	) : (
@@ -112,8 +122,8 @@ const Realisations = ({
 			isVisible={false}
 		>
 			<Button to={buttonTo}
-				smooth={true}
-				duration={700}
+				smooth={BtnModalSmooth}
+				duration={BtnModalDur}
 				spy={true}
 				exact="true"
 				offset={-80}
@@ -150,7 +160,7 @@ const Realisations = ({
 								</Heading>
 								<Subtitle darkText={darkText}>{AnimDescription}</Subtitle>
 								{description2 ? <Subtitle darkText={darkText}>{AnimDescription2}</Subtitle> : null}
-								<BtnWrap onClick={switchText}>
+								<BtnWrap>
 									{Btn}
 								</BtnWrap>
 							</TextWrapper>
@@ -162,6 +172,8 @@ const Realisations = ({
 						</Column2>
 					</RealRow>
 				</RealWrapper>
+				{buttonModal ? <Modal showModal={showModal} setShowModal={setShowModal} WIP={WIP}/> : null}
+
 			</RealContainer>
 		</>
 	);

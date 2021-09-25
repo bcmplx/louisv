@@ -16,6 +16,8 @@ export const homeObjOne = {
 	Aujourd’hui je suis à la recherche d’un CDI dans le développement
 	d’applications web et mobile.`,
 	buttonLabel: 'Mes compétences',
+	buttonModal: false,
+	WIP: false,
 	buttonTo: 'competences',
 	imgStart: false,
 	img: require('../../images/coding_2.svg').default,
@@ -40,7 +42,9 @@ export const homeObjTwo = {
 	headLine: 'Days in Paris',
 	description: `La formation se termine par ce que l'école appelle l'apothéose, à savoir un mois entièrement consacré à la réalisation d'un projet mobilisant toutes nos compétences. `,
 	buttonLabel: 'En savoir plus',
-	buttonTo: 'dip',
+	buttonModal: true,
+	WIP: false,
+	buttonTo: 'realisations',
 	imgStart: true,
 	img: require('../../images/eiffel.svg').default,
 	alt: 'dip',
@@ -55,24 +59,6 @@ export const homeObjTwo = {
 	maxMobile: 4300
 };
 
-export const homeObjThree = {
-	id:'formations',
-	lightBg: true,
-	lightText: false,
-	lightTextDesc: false,
-	topLine: 'Me contacter',
-	headLine: 'FORMATIONS',
-	description: `Une idée ? Un projet ? Une question ? N'hésitez pas à me demander un devis (gratuit) ! `,
-	buttonLabel: 'contact',
-	buttonTo: 'home',
-	imgStart: false,
-	img: require('../../images/coding_book.svg').default,
-	alt: 'dip',
-	dark: false,
-	primary: false,
-	darkText: true
-};
-
 export const homeObjFour = {
 	id:'contactpage',
 	lightBg: false,
@@ -82,7 +68,9 @@ export const homeObjFour = {
 	headLine: 'Louis Villain',
 	description: `Une idée ? Un projet ? Une question ? N'hésitez pas à me demander un devis (gratuit) ! `,
 	buttonLabel: 'Contact',
-	buttonTo: 'home',
+	buttonModal: true,
+	WIP: true,
+	buttonTo: 'contactpage',
 	imgStart: false,
 	img: require('../../images/coding_11.svg').default,
 	alt: 'dip',
