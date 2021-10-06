@@ -41,6 +41,8 @@ export const realisationsDIP = {
 	topLine: 'Projet de fin de formation Oclock',
 	headLine: 'Days in Paris',
 	description: `La formation se termine par ce que l'école appelle l'apothéose, à savoir un mois entièrement consacré à la réalisation d'un projet mobilisant toutes nos compétences. `,
+	extraDescription: true, 
+	nextPage: true,
 	buttonLabel: 'En savoir plus',
 	buttonModal: true,
 	WIP: true,
