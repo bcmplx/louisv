@@ -36,6 +36,7 @@ const travel = ({
 	buttonModal,
 	showModal,
 	setShowModal,
+	WIP
 
 }) => {
 
@@ -83,7 +84,7 @@ const travel = ({
 					</Column3>
 				</RealRow>
 			</RealWrapper>
-			{buttonModal ? <Modal showModal={showModal} setShowModal={setShowModal}/> : null}
+			{buttonModal ? <Modal showModal={showModal} setShowModal={setShowModal} WIP={WIP}/> : null}
 
 		</RealContainer>
 	);

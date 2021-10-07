@@ -34,7 +34,7 @@ const Formations = () => {
 
 	const animations = () => { 
 		if (isMobile) {
-			if(window.scrollY > 4000 && window.scrollY < 6100) {
+			if(window.scrollY > 4300 && window.scrollY < 6550) {
 				setanimated(true);
 			} else {
 				setanimated(false);

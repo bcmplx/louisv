@@ -10,12 +10,12 @@ export const RealContainer = styled.div`
 
 	@media screen and (max-width: 768px) {
 		padding: 100px 0;
-		height: 2000px;
+		height: 1000px;
 	}
 	
 	@media screen and (max-width: 468px) {
 		padding: 70px 0;
-		height: 1500px;
+		height: 950px;
 	}
 `;
 
