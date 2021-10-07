@@ -1,9 +1,9 @@
 import React, {useState, useEffect } from 'react';
 import { Button } from '../Services/ButtonElement';
 import {Animated} from 'react-animated-css';
-import {RealContainer, 
-	RealWrapper, 
-	RealRow, 
+import {TemplateContainer, 
+	TemplateWrapper, 
+	TemplateRow, 
 	Column1, 
 	Column2, 
 	TextWrapper, 
@@ -15,8 +15,10 @@ import {RealContainer,
 	Img} from './TemplateElements';
 import { useMediaQuery } from 'react-responsive';
 import Modal from '../Modal';
+import Dip from '../RealisationsSection/dip';
+import Travel from '../RealisationsSection/travel';
 
-const Realisations = ({
+const Templateisations = ({
 	lightBg, 
 	id, 
 	imgStart, 
@@ -38,14 +40,17 @@ const Realisations = ({
 	minMobile, maxMobile,
 	animation1,
 	animation2,
-	animation3
+	animation3,
+	nextPage
 
 }) => {
 
 	const [animatedBtn, setanimBtn] = useState(false);
 	const [animated, setanimated] = useState(false);
+	const [page1, setpage1] = useState(true);
 
 	const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
 
 
 	const changeDisplay = () => { 
@@ -139,6 +144,104 @@ const Realisations = ({
 	const AnimDescription = animatedCss(description, 2000, animation3, 'fadeOutLeft');
 	const AnimDescription2 = animatedCss(description2, 4000, animation3, 'fadeOutLeft');
 
+	const changePage = () => {
+		setpage1(prev => {
+			return !prev;
+		});
+	};
+
+	const RealSection = !isMobile ? (
+		page1 ? (
+			<Dip animatedCss={animatedCss}
+				Btn={Btn}
+				headLine={headLine}
+				animation1={animation1}
+				topLine={topLine}
+				animation2={animation2}
+				description={description}
+				animation3={animation3}
+				img={img}
+				alt={alt}
+				imgStart={imgStart}
+				lightText={lightText}
+				changePage={changePage}
+				lightBg={lightBg}
+				id={id}
+				nextPage={nextPage}
+				buttonModal={buttonModal}
+				showModal={showModal}
+				setShowModal={setShowModal}
+				WIP={WIP}
+			/>
+		) : (
+			<Travel animatedCss={animatedCss}
+				Btn={Btn}
+				headLine={headLine}
+				animation1={animation1}
+				topLine={topLine}
+				animation2={animation2}
+				description={description}
+				animation3={animation3}
+				img={img}
+				alt={alt}
+				imgStart={imgStart}
+				lightText={lightText}
+				changePage={changePage}
+				lightBg={lightBg}
+				id={id}
+				nextPage={nextPage}
+				buttonModal={buttonModal}
+				showModal={showModal}
+				setShowModal={setShowModal}
+				WIP={WIP}
+			/>
+		)
+	) : (
+		<>
+			<Dip animatedCss={animatedCss}
+				Btn={Btn}
+				headLine={headLine}
+				animation1={animation1}
+				topLine={topLine}
+				animation2={animation2}
+				description={description}
+				animation3={animation3}
+				img={img}
+				alt={alt}
+				imgStart={imgStart}
+				lightText={lightText}
+				changePage={changePage}
+				lightBg={lightBg}
+				id={id}
+				nextPage={nextPage}
+				buttonModal={buttonModal}
+				showModal={showModal}
+				setShowModal={setShowModal}
+				WIP={WIP}
+			/>
+			<Travel animatedCss={animatedCss}
+				Btn={Btn}
+				headLine={headLine}
+				animation1={animation1}
+				topLine={topLine}
+				animation2={animation2}
+				description={description}
+				animation3={animation3}
+				img={img}
+				alt={alt}
+				imgStart={imgStart}
+				lightText={lightText}
+				changePage={changePage}
+				lightBg={lightBg}
+				id={id}
+				nextPage={nextPage}
+				buttonModal={buttonModal}
+				showModal={showModal}
+				setShowModal={setShowModal}
+				WIP={WIP}
+			/>
+		</>
+	);
 
 	useEffect(() => {
 		window.addEventListener('scroll', changeDisplay);
@@ -147,36 +250,42 @@ const Realisations = ({
 	return (
 		
 		<>			
-			<RealContainer lightBg={lightBg} id={id}>
-				<RealWrapper>
-					<RealRow imgStart={imgStart}>
-						<Column1>
-							<TextWrapper>
-								<TopLine>
-									{AnimTopLine}
-								</TopLine>
-								<Heading lightText={lightText}>
-									{AnimTitle}
-								</Heading>
-								<Subtitle darkText={darkText}>{AnimDescription}</Subtitle>
-								{description2 ? <Subtitle darkText={darkText}>{AnimDescription2}</Subtitle> : null}
-								<BtnWrap>
-									{Btn}
-								</BtnWrap>
-							</TextWrapper>
-						</Column1>
-						<Column2>
-							<ImgWrap>
-								<Img src={img} alt={alt}/>
-							</ImgWrap>
-						</Column2>
-					</RealRow>
-				</RealWrapper>
-				{buttonModal ? <Modal showModal={showModal} setShowModal={setShowModal} WIP={WIP}/> : null}
+			{nextPage ? ( 
+				RealSection
+			) : (
+				<TemplateContainer lightBg={lightBg} id={id} nextPage={nextPage}>
+					<TemplateWrapper>
+						<TemplateRow imgStart={imgStart}>
+							<Column1>
+								<TextWrapper>
+									<TopLine>
+										{AnimTopLine}
+									</TopLine>
+									<Heading lightText={lightText}>
+										{AnimTitle}
+									</Heading>
+									<Subtitle darkText={darkText}>{AnimDescription}</Subtitle>
+									{description2 ? <Subtitle darkText={darkText}>{AnimDescription2}</Subtitle> : null}
+									<BtnWrap>
+										{Btn}
+									</BtnWrap>
+								</TextWrapper>
+							</Column1>
+							
+							<Column2>
+								<ImgWrap>
+									<Img src={img} alt={alt}/>
+								</ImgWrap>
+							</Column2>
+						</TemplateRow>
+					</TemplateWrapper>
+					{buttonModal ? <Modal showModal={showModal} setShowModal={setShowModal} WIP={WIP}/> : null}
 
-			</RealContainer>
+				</TemplateContainer>
+
+			)}				
 		</>
 	);
 };
 
-export default Realisations;
+export default Templateisations;

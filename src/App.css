@@ -21,6 +21,7 @@ body {
 	  
 a:hover {
 	color: #fefefe;
+	transition: 0.2s ease;
 }
 
   .icon {
@@ -33,10 +34,10 @@ li {
 }
 
 	  
-a { 
+/* a { 
 	color: #fefefe; 
 	text-decoration: inherit;
-  } 
+}  */
 
 ol, ul {
 	padding-left: 0;
@@ -135,9 +136,10 @@ a {
 	text-decoration: inherit;
 } 
 
-a:hover {
+/* a:hover {
 	color: #fefefe;
-}
+	transition: 0.3s ease;
+} */
 .icon {
 	padding: 30% !important;
 }

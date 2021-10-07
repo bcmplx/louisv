@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 /* eslint-disable */
 
-export const TemplateContainer = styled.div`
+export const RealContainer = styled.div`
 	color: #fefefe;
 	background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#152436')};
 	height: 1000px;
@@ -10,17 +10,16 @@ export const TemplateContainer = styled.div`
 
 	@media screen and (max-width: 768px) {
 		padding: 100px 0;
-		/* height: 1100px; */
-		height: ${({nextPage}) => (nextPage ? '2000px' : '1100px')};
+		height: 1000px;
 	}
 	
-	@media screen and (max-width: 520px) {
+	@media screen and (max-width: 468px) {
 		padding: 70px 0;
-		height: ${({nextPage}) => (nextPage ? '1500px' : '1100px')};
+		height: 950px;
 	}
 `;
 
-export const TemplateWrapper = styled.div`
+export const RealWrapper = styled.div`
 	display: grid;
 	z-index: 1;
 	height: 860px;
@@ -33,22 +32,20 @@ export const TemplateWrapper = styled.div`
 
 `;
 
-export const TemplateRow = styled.div`
+export const RealRow = styled.div`
 	display: grid;
-	/* grid-auto-columns: minmax(auto, 1fr); */
-	grid-auto-columns: ${({arrow}) => (arrow ? `5fr 5fr 1fr` : `minmax(auto, 1fr)`)};
+	grid-auto-columns: ${({imgStart}) => (imgStart ? `5fr 5fr 1fr;` : `1fr 4fr 3fr;`)};
 	align-items: center;
-	grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1 col3'` : `'col1 col2'`)}; // 
+	grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1 col3'` : `'col3 col1 col2'`)}; 
 
 	@media screen and (max-width: 768px) {
-		grid-auto-columns: ${({arrow}) => (arrow ? `1fr` : `minmax(auto, 1fr)`)};
+		grid-auto-columns: 1fr;
 		grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};  
-		/* padding: 0.3rem; */
-		padding: ${({nextPage}) => (nextPage ? '0.3rem' : null)};
-		border: ${({nextPage}) => (nextPage ? '1px solid #fefefe' : null)};
-		border-radius: ${({nextPage}) => (nextPage ? '8px' : null)};
-		/* border: 1px solid #fefefe;
-		border-radius: 8px; */
+		border: 1px solid #fefefe;
+		border-radius: 8px;
+		padding: 1rem 0.3rem;
+		margin: 1rem 0;
+
 	}
 `;
 

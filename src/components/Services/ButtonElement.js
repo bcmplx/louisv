@@ -21,6 +21,6 @@ export const Button = styled(LinkScroll)`
 	&:hover {
 		transition: all 0.2s ease-in-out; 
 		background: ${({primary}) => (primary ? '#101522' : '#029056')};   
-		/*            */
+		transform: translateY(-1.5px);
 	}
 `;
