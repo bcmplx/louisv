@@ -27,7 +27,7 @@ const Home = () => {
 			<IntroSection />
 			
 			<TemplateSections {...profil} />
-			<CompetencesSection />
+			<CompetencesSection/>
 			<TemplateSections {...realisationsDIP} />
 			<FormationsSection />
 			<TemplateSections {...contact} />
