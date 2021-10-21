@@ -11,7 +11,7 @@ import carouselimg3 from '../../images/carousel/carousel6.svg';
 
 const index = () => {
 	return (
-		<Container>
+		<Container id="realisations">
 			<H1>MES RÉALISATIONS</H1>
 			<Wrapper>
 				<Carousel interval='4000' showArrows={true} autoPlay={true} infiniteLoop={true} css={'@media screen and (max-width: 420px){max-width: 400px;} @media screen and (max-width: 375px){max-width: 370px;}'}>
@@ -78,6 +78,11 @@ const Wrapper = styled.div`
 		width: 90%;
 	}
 
+	.slider-wrapper {
+		border: 1px solid white;
+		padding: 0.5rem;
+		border-radius: 10px;
+	}
 `;
 
 const Container = styled.div`
