@@ -16,32 +16,37 @@ const index = () => {
 			<Wrapper>
 				<Carousel interval='4000' showArrows={true} autoPlay={true} infiniteLoop={true} css={'@media screen and (max-width: 420px){max-width: 400px;} @media screen and (max-width: 375px){max-width: 370px;}'}>
 					<div> 
+						<img src={eiffelImg} />
 						<a href="https://daysinparis.netlify.app/">
-							<img src={eiffelImg} />
+							
 							<p className="legend">Days in Paris</p>
 						</a>
 					</div>
 					<div>
+						<img src={carouselimg1} />
 						<a href="https://louisvillain-dev.com/">
-							<img src={carouselimg1} />
+							
 							<p className="legend">Portfolio</p>
 						</a>
 					</div>
 					<div>
+						<img src={carouselimg2} />
 						<a href="https://calendar-louisv.netlify.app/">
-							<img src={carouselimg2} />
+							
 							<p className="legend">Calendar</p>
 						</a>
 					</div>
 					<div>
+						<img src={travelImg} />
 						<a href="https://travel-louisvillain.netlify.app/">
-							<img src={travelImg} />
+							
 							<p className="legend">Travel</p>
 						</a>
 					</div>
 					<div>
+						<img src={carouselimg3} />
 						<a href="https://tictactrip.netlify.app/">
-							<img src={carouselimg3} />
+							
 							<p className="legend">Train Booking</p>
 						</a>
 					</div>
