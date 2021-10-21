@@ -9,7 +9,7 @@ function App() {
 
 	return (    
 		<Router className="App">
-			<Home />
+			<Home/>
 		</Router>
 	);
 }

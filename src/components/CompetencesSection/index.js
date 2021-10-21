@@ -15,6 +15,8 @@ import { useMediaQuery } from 'react-responsive';
 
 const Competences = () => {
 
+	
+
 	const [animated, setanimated] = useState(false);
 	const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
