@@ -39,7 +39,7 @@ const IntroSection = () => {
 		>
 			<IntroH1>Bonjour, je m&#39;appelle Louis, et je suis développeur</IntroH1>
 			<IntroP>
-				<span className="type-animationOne animating">Je suis à la recherche d&#39;un CDI sur Paris.</span>
+				<span className="type-animationOne animating">Je suis à la recherche de missions.</span>
 			</IntroP>
 		
 			<IntroBtnWrapper>
