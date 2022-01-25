@@ -3,7 +3,6 @@ import { Link as LinkScroll } from 'react-scroll';
 
 
 export const Nav = styled.nav`
-	/* background: ${({navbarBg}) => (navbarBg ? 'linear-gradient(90deg, #029056 0%, #152436 60%)' : 'transparent')};  */
 	background: ${({navbarBg}) => (navbarBg ? '#152436' : 'transparent')};
 	transition: 0.9s all ease-in-out;
 	height: 80%;

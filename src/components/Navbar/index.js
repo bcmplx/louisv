@@ -15,7 +15,7 @@ import { scrollSpy } from 'react-scroll';
 const Navbar = ({toggle}) => {
 
 	const [displayLogo, setdisplayLogo] = useState(false);
-	const [navbarBg, setnavbarBg] = useState(false);
+	
 
 	const changeDisplay = () => { 
 		if(window.scrollY >= 1300) {
@@ -24,6 +24,7 @@ const Navbar = ({toggle}) => {
 			setdisplayLogo(false);
 		}
 	};
+	const [navbarBg, setnavbarBg] = useState(false);
 
 	const changeBg = () => { 
 		scrollSpy.update('refresh');
@@ -33,6 +34,10 @@ const Navbar = ({toggle}) => {
 			setnavbarBg(false);
 		}
 	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', changeBg);
+	}, []); 
 
 	const homeActive = navbarBg ? (
 		<NavLinks to="home"
